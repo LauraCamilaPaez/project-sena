@@ -63,7 +63,7 @@
         <div class="menu-body slimscroll">
             <div id="MetricaAnalytics" class="main-icon-menu-pane active">
                 <div class="title-box">
-                    <h6 class="menu-title">Acciones</h6>
+                    <h6 class="menu-title">Revisión</h6>
                 </div>
                 <ul class="nav ">
                     <li class="nav-item "><a class="nav-link" href="/analytics/analytics-index">Perfil</a></li>

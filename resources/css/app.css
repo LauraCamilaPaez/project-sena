@@ -82,7 +82,10 @@
 }
 
 .page-wrapper .page-content {
-    width: calc(100% - 270px);
+    width: calc(100% - 2
+
+
+    70px);
     margin-left: auto;
     position: relative;
     min-height: 100vh;

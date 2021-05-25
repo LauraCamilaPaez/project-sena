@@ -4,13 +4,13 @@
         <a href="http://metrica.laravel.themesbrand.com/analytics/analytics-index"
            class="logo logo-metrica d-block text-center">
                     <span>
-                        <img src="http://metrica.laravel.themesbrand.com/assets/images/logo-sm.png" alt="logo-small"
+                        <img src="https://images.vexels.com/media/users/3/142635/isolated/preview/a2666c402d4de7d4854ecd75c5ac2b85-icono-redondo-de-remolinos-giratorios-by-vexels.png" alt="logo-small"
                              class="logo-sm">
                     </span>
         </a>
         <nav class="nav">
-            <a href="#MetricaAnalytics" class="nav-link" data-toggle="tooltip-custom" data-placement="right" title=""
-               data-original-title="Analytics" data-trigger="hover">
+            <a href="#MetricaAnalytics" class="nav-link active" data-toggle="tooltip-custom" data-placement="right" title=""
+               data-original-title="Analytics" data-trigger="hover" >
                 <i data-feather="bar-chart-2" class="align-self-center menu-icon icon-dual"></i>
             </a><!--end MetricaAnalytics-->
 
@@ -41,7 +41,7 @@
                 <i data-feather="message-circle" class="align-self-center menu-icon icon-md icon-dual mb-4"></i>
             </a>
             <a href="" class="profile">
-                <img src="http://metrica.laravel.themesbrand.com/assets/images/users/user-4.jpg" alt="profile-user"
+                <img src="https://lh3.googleusercontent.com/proxy/3OgfVcv3P9eUK4xkvXEd0c3fHK64ySm_TBKEuYfUnD2nvmYLhEOegN8rP1CtaIj2E7rr_Vn758nIk294Dcp9y4Wcgy7fsdsWCDpgu0h4lWmHB6WPyYNysX_ERj4SfN56VvE" alt="profile-user"
                      class="rounded-circle thumb-sm">
             </a>
         </div>
@@ -52,23 +52,23 @@
         <div class="topbar-left">
             <a href="/analytics/analytics-index" class="logo">
                         <span>
-                            <img src="http://metrica.laravel.themesbrand.com/assets/images/logo-dark.png"
+                            <img src="{{ url('http://metrica.laravel.themesbrand.com/assets/images/logo-dark.png') }}"
                                  alt="logo-large" class="logo-lg logo-dark">
-                            <img src="http://metrica.laravel.themesbrand.com/assets/images/logo.png" alt="logo-large"
+                            <img src="{{ url('img/logo.png') }}" alt="logo-large"
                                  class="logo-lg logo-light">
                         </span>
             </a>
         </div>
         <!--end logo-->
         <div class="menu-body slimscroll">
-            <div id="MetricaAnalytics" class="main-icon-menu-pane">
+            <div id="MetricaAnalytics" class="main-icon-menu-pane active">
                 <div class="title-box">
-                    <h6 class="menu-title">Analytics</h6>
+                    <h6 class="menu-title">Acciones</h6>
                 </div>
-                <ul class="nav">
-                    <li class="nav-item"><a class="nav-link" href="/analytics/analytics-index">Analytic</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/analytics/analytics-customers">Customers</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/analytics/analytics-reports">Reports</a></li>
+                <ul class="nav ">
+                    <li class="nav-item "><a class="nav-link" href="/analytics/analytics-index">Perfil</a></li>
+                    <li class="nav-item "><a class="nav-link" href="/analytics/analytics-customers">Incapacidades</a></li>
+                    <li class="nav-item "><a class="nav-link" href="/analytics/analytics-reports">Certificados</a></li>
                 </ul>
             </div><!-- end Analytic -->
 

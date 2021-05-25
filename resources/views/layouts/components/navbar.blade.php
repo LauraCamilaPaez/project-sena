@@ -7,23 +7,23 @@
                 <a class="nav-link dropdown-toggle waves-effect waves-light" data-toggle="dropdown"
                    href="javascript: void(0);" role="button"
                    aria-haspopup="false" aria-expanded="false">
-                    English <img src="http://metrica.laravel.themesbrand.com/assets/images/flags/us_flag.jpg"
+                    Español <img src="http://metrica.laravel.themesbrand.com/assets/images/flags/spain_flag.jpg"
                                  class="ml-2" height="16" alt=""/> <i class="mdi mdi-chevron-down"></i>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right">
-                    <a class="dropdown-item" href="javascript: void(0);"><span> German </span><img
+                    <a class="dropdown-item" href="javascript: void(0);"><span> Alemán </span><img
                             src="http://metrica.laravel.themesbrand.com/assets/images/flags/germany_flag.jpg" alt=""
                             class="ml-2 float-right" height="14"/></a>
-                    <a class="dropdown-item" href="javascript: void(0);"><span> Italian </span><img
+                    <a class="dropdown-item" href="javascript: void(0);"><span> Italiano </span><img
                             src="http://metrica.laravel.themesbrand.com/assets/images/flags/italy_flag.jpg" alt=""
                             class="ml-2 float-right" height="14"/></a>
-                    <a class="dropdown-item" href="javascript: void(0);"><span> French </span><img
+                    <a class="dropdown-item" href="javascript: void(0);"><span> Francés </span><img
                             src="http://metrica.laravel.themesbrand.com/assets/images/flags/french_flag.jpg" alt=""
                             class="ml-2 float-right" height="14"/></a>
-                    <a class="dropdown-item" href="javascript: void(0);"><span> Spanish </span><img
-                            src="http://metrica.laravel.themesbrand.com/assets/images/flags/spain_flag.jpg" alt=""
+                    <a class="dropdown-item" href="javascript: void(0);"><span> Inglés </span><img
+                            src="http://metrica.laravel.themesbrand.com/assets/images/flags/us_flag.jpg" alt=""
                             class="ml-2 float-right" height="14"/></a>
-                    <a class="dropdown-item" href="javascript: void(0);"><span> Russian </span><img
+                    <a class="dropdown-item" href="javascript: void(0);"><span> Ruso </span><img
                             src="http://metrica.laravel.themesbrand.com/assets/images/flags/russia_flag.jpg" alt=""
                             class="ml-2 float-right" height="14"/></a>
                 </div>
@@ -119,17 +119,16 @@
                 <a class="nav-link dropdown-toggle waves-effect waves-light nav-user" data-toggle="dropdown" href="#"
                    role="button"
                    aria-haspopup="false" aria-expanded="false">
-                    <img src="http://metrica.laravel.themesbrand.com/assets/images/users/user-4.jpg" alt="profile-user"
+                    <img src="https://lh3.googleusercontent.com/proxy/3OgfVcv3P9eUK4xkvXEd0c3fHK64ySm_TBKEuYfUnD2nvmYLhEOegN8rP1CtaIj2E7rr_Vn758nIk294Dcp9y4Wcgy7fsdsWCDpgu0h4lWmHB6WPyYNysX_ERj4SfN56VvE" alt="profile-user"
                          class="rounded-circle"/>
-                    <span class="ml-1 nav-user-name hidden-sm">Amelia <i class="mdi mdi-chevron-down"></i> </span>
+                    <span class="ml-1 nav-user-name hidden-sm">Sophia <i class="mdi mdi-chevron-down"></i> </span>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right">
-                    <a class="dropdown-item" href="#"><i class="dripicons-user text-muted mr-2"></i> Profile</a>
-                    <a class="dropdown-item" href="#"><i class="dripicons-wallet text-muted mr-2"></i> My Wallet</a>
-                    <a class="dropdown-item" href="#"><i class="dripicons-gear text-muted mr-2"></i> Settings</a>
-                    <a class="dropdown-item" href="#"><i class="dripicons-lock text-muted mr-2"></i> Lock screen</a>
+                    <a class="dropdown-item" href="#"><i class="dripicons-gear text-muted mr-2"></i> Perfil </a>
+                    <a class="dropdown-item" href="#"><i class="dripicons-gear text-muted mr-2"></i> Mis Certificados</a>
+                    <a class="dropdown-item" href="#"><i class="dripicons-gear text-muted mr-2"></i> Mis Incapacidades</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="/logout"><i class="dripicons-exit text-muted mr-2"></i> Logout</a>
+                    <a class="dropdown-item" href="/logout"><i class="dripicons-exit text-muted mr-2"></i> Cerrar Sesión</a>
                 </div>
             </li>
             <li class="mr-2">
@@ -157,18 +156,12 @@
                 <a class="nav-link dropdown-toggle waves-effect waves-light nav-user" data-toggle="dropdown" href="#"
                    role="button"
                    aria-haspopup="false" aria-expanded="false">
-                    <span class="ml-1 p-2 bg-soft-classic nav-user-name hidden-sm rounded">System <i
+                    <span class="ml-1 p-2 bg-soft-classic nav-user-name hidden-sm rounded">Opciones <i
                             class="mdi mdi-chevron-down"></i> </span>
                 </a>
                 <div class="dropdown-menu dropdown-xl dropdown-menu-left p-0">
                     <div class="row no-gutters">
                         <div class="col-12 col-lg-6">
-                            <div class="text-center system-text">
-                                <h4 class="text-white">The Poworfull Dashboard</h4>
-                                <p class="text-white">See all the pages Metrica.</p>
-                                <a href="https://themesbrand.com/metrica/" class="btn btn-sm btn-pink mt-2">See
-                                    Dashboard</a>
-                            </div>
                             <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
@@ -196,22 +189,15 @@
                         </div><!--end col-->
                         <div class="col-12 col-lg-6">
                             <div class="divider-custom mb-0">
-                                <div class="divider-text bg-light">All Dashboard</div>
+                                <div class="divider-text bg-light">Portafolio de la página</div>
                                 </divi>
                                 <div class="p-4">
                                     <div class="row">
                                         <div class="col-6">
-                                            <a class="dropdown-item mb-2" href="/analytics/analytics-index">
-                                                Analytics</a>
-                                            <a class="dropdown-item mb-2" href="/crypto/crypto-index"> Crypto</a>
-                                            <a class="dropdown-item mb-2" href="/crm/crm-index"> CRM</a>
-                                            <a class="dropdown-item" href="/projects/projects-index"> Project</a>
-                                        </div>
-                                        <div class="col-6">
-                                            <a class="dropdown-item mb-2" href="/ecommerce/ecommerce-index">
-                                                Ecommerce</a>
-                                            <a class="dropdown-item mb-2" href="/helpdesk/helpdesk-index"> Helpdesk</a>
-                                            <a class="dropdown-item" href="/hospital/hospital-index"> Hospital</a>
+                                            <a class="dropdown-item mb-2" href="/analytics/analytics-index">Perfil</a>
+                                            <a class="dropdown-item mb-2" href="/crypto/crypto-index">Certificados</a>
+                                            <a class="dropdown-item mb-2" href="/crm/crm-index">Incapacidades</a>
+                                            <a class="dropdown-item" href="/projects/projects-index">Supervisor</a>
                                         </div>
                                     </div>
                                 </div>
@@ -221,7 +207,7 @@
             </li>
             <li class="hide-phone app-search">
                 <form role="search" class="">
-                    <input type="text" id="AllCompo" placeholder="Search..." class="form-control">
+                    <input type="text" id="AllCompo" placeholder="Buscar..." class="form-control">
                     <a href=""><i class="fas fa-search"></i></a>
                 </form>
             </li>

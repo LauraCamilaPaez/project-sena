@@ -119,7 +119,7 @@
                 <a class="nav-link dropdown-toggle waves-effect waves-light nav-user" data-toggle="dropdown" href="#"
                    role="button"
                    aria-haspopup="false" aria-expanded="false">
-                    <img src="https://lh3.googleusercontent.com/proxy/3OgfVcv3P9eUK4xkvXEd0c3fHK64ySm_TBKEuYfUnD2nvmYLhEOegN8rP1CtaIj2E7rr_Vn758nIk294Dcp9y4Wcgy7fsdsWCDpgu0h4lWmHB6WPyYNysX_ERj4SfN56VvE" alt="profile-user"
+                    <img src="{{ url('img/profile-picture.png') }}" alt="profile-user"
                          class="rounded-circle"/>
                     <span class="ml-1 nav-user-name hidden-sm">Sophia <i class="mdi mdi-chevron-down"></i> </span>
                 </a>
@@ -159,51 +159,6 @@
                     <span class="ml-1 p-2 bg-soft-classic nav-user-name hidden-sm rounded">Opciones <i
                             class="mdi mdi-chevron-down"></i> </span>
                 </a>
-                <div class="dropdown-menu dropdown-xl dropdown-menu-left p-0">
-                    <div class="row no-gutters">
-                        <div class="col-12 col-lg-6">
-                            <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
-                                <div class="carousel-inner">
-                                    <div class="carousel-item active">
-                                        <img
-                                            src="http://metrica.laravel.themesbrand.com/assets/images/dashboard/dash-1.png"
-                                            class="d-block img-fluid" alt="...">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img
-                                            src="http://metrica.laravel.themesbrand.com/assets/images/dashboard/dash-4.png"
-                                            class="d-block img-fluid" alt="...">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img
-                                            src="http://metrica.laravel.themesbrand.com/assets/images/dashboard/dash-2.png"
-                                            class="d-block img-fluid" alt="...">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img
-                                            src="http://metrica.laravel.themesbrand.com/assets/images/dashboard/dash-3.png"
-                                            class="d-block img-fluid" alt="...">
-                                    </div>
-                                </div>
-                            </div>
-                        </div><!--end col-->
-                        <div class="col-12 col-lg-6">
-                            <div class="divider-custom mb-0">
-                                <div class="divider-text bg-light">Portafolio de la página</div>
-                                </divi>
-                                <div class="p-4">
-                                    <div class="row">
-                                        <div class="col-6">
-                                            <a class="dropdown-item mb-2" href="/analytics/analytics-index">Perfil</a>
-                                            <a class="dropdown-item mb-2" href="/crypto/crypto-index">Certificados</a>
-                                            <a class="dropdown-item mb-2" href="/crm/crm-index">Incapacidades</a>
-                                            <a class="dropdown-item" href="/projects/projects-index">Supervisor</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div><!--end col-->
-                        </div><!--end row-->
-                    </div>
             </li>
             <li class="hide-phone app-search">
                 <form role="search" class="">

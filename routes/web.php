@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\GenderController;
+use App\Http\Controllers\DocumentTypeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -30,3 +31,5 @@ Route::get('profile',function(){
 Route::resource('users',UserController::class);
 
 Route::resource('genders', GenderController::class);
+
+Route::resource('document_types', DocumentTypeController::class);

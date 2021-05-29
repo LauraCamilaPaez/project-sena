@@ -36,7 +36,7 @@
 
         </nav><!--end nav-->
         <div class="pro-metrica-end">
-            <a href="" class="help" data-toggle="tooltip-custom" data-placement="right" title=""
+            <a href="https://github.com/LauraCamilaPaez/project-sena" target="_blank" class="help" data-toggle="tooltip-custom" data-placement="right" title=""
                data-original-title="GitHub">
                 <i data-feather="github" class="align-self-center menu-icon icon-md icon-dual mb-4"></i>
             </a>
@@ -66,6 +66,7 @@
                     <h6 class="menu-title">Revisión</h6>
                 </div>
                 <ul class="nav ">
+                    <li class="nav-item "><a class="nav-link" href="/analytics/analytics-index">Usuarios</a></li>
                     <li class="nav-item "><a class="nav-link" href="/analytics/analytics-index">Perfil</a></li>
                     <li class="nav-item "><a class="nav-link" href="/analytics/analytics-customers">Incapacidades</a></li>
                     <li class="nav-item "><a class="nav-link" href="/analytics/analytics-reports">Certificados</a></li>

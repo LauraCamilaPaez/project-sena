@@ -32,6 +32,7 @@ class User extends Authenticatable
         'password',
         'gender',
         'document',
+        'document_type',
         'phone',
         'mobile',
     ];

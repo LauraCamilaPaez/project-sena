@@ -28,6 +28,7 @@ class UserFactory extends Factory
             'email' => $this->faker->unique()->safeEmail(),
             'gender' => 'Masculino',
             'document' => Str::random(10),
+            'document_type' => 'Cédula de Ciudadanía',
             'phone' => Str::random(10),
             'mobile' => Str::random(10),
             'email_verified_at' => now(),

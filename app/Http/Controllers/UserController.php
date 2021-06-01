@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\DocumentType;
+use App\Models\Gender;
 use Illuminate\Http\Request;
 use App\Models\User;
 
@@ -27,7 +29,9 @@ class UserController extends Controller
      */
     public function create()
     {
-        //
+        $document_types = DocumentType::all();
+        $genders = Gender::all();
+        return view('pages.admin.user.create',compact('genders', 'document_types'));
     }
 
     /**
@@ -38,7 +42,9 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
+        $request['password'] = bcrypt($request->document);
         $user = User::create($request->all());
+        return back();
     }
 
     /**

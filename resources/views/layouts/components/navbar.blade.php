@@ -11,31 +11,13 @@
                                  class="ml-2" height="16" alt=""/> <i class="mdi mdi-chevron-down"></i>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right">
-                    <a class="dropdown-item" href="javascript: void(0);"><span> Alemán </span><img
-                            src="http://metrica.laravel.themesbrand.com/assets/images/flags/germany_flag.jpg" alt=""
-                            class="ml-2 float-right" height="14"/></a>
-                    <a class="dropdown-item" href="javascript: void(0);"><span> Italiano </span><img
-                            src="http://metrica.laravel.themesbrand.com/assets/images/flags/italy_flag.jpg" alt=""
-                            class="ml-2 float-right" height="14"/></a>
-                    <a class="dropdown-item" href="javascript: void(0);"><span> Francés </span><img
-                            src="http://metrica.laravel.themesbrand.com/assets/images/flags/french_flag.jpg" alt=""
-                            class="ml-2 float-right" height="14"/></a>
                     <a class="dropdown-item" href="javascript: void(0);"><span> Inglés </span><img
                             src="http://metrica.laravel.themesbrand.com/assets/images/flags/us_flag.jpg" alt=""
-                            class="ml-2 float-right" height="14"/></a>
-                    <a class="dropdown-item" href="javascript: void(0);"><span> Ruso </span><img
-                            src="http://metrica.laravel.themesbrand.com/assets/images/flags/russia_flag.jpg" alt=""
                             class="ml-2 float-right" height="14"/></a>
                 </div>
             </li>
 
             <li class="dropdown notification-list">
-                <a class="nav-link dropdown-toggle arrow-none waves-light waves-effect" data-toggle="dropdown" href="#"
-                   role="button"
-                   aria-haspopup="false" aria-expanded="false">
-                    <i class="ti-bell noti-icon"></i>
-                    <span class="badge badge-danger badge-pill noti-icon-badge">2</span>
-                </a>
                 <div class="dropdown-menu dropdown-menu-right dropdown-lg pt-0">
 
                     <h6 class="dropdown-item-text font-15 m-0 py-3 bg-primary text-white d-flex justify-content-between align-items-center">
@@ -131,11 +113,6 @@
                     <a class="dropdown-item" href="/logout"><i class="dripicons-exit text-muted mr-2"></i> Cerrar Sesión</a>
                 </div>
             </li>
-            <li class="mr-2">
-                <a href="#" class="nav-link" data-toggle="modal" data-animation="fade" data-target=".modal-rightbar">
-                    <i data-feather="align-right" class="align-self-center"></i>
-                </a>
-            </li>
         </ul><!--end topbar-nav-->
 
         <ul class="list-unstyled topbar-nav mb-0">
@@ -151,14 +128,6 @@
                 <button class="button-menu-mobile nav-link">
                     <i data-feather="menu" class="align-self-center"></i>
                 </button>
-            </li>
-            <li class="dropdown">
-                <a class="nav-link dropdown-toggle waves-effect waves-light nav-user" data-toggle="dropdown" href="#"
-                   role="button"
-                   aria-haspopup="false" aria-expanded="false">
-                    <span class="ml-1 p-2 bg-soft-classic nav-user-name hidden-sm rounded">Opciones <i
-                            class="mdi mdi-chevron-down"></i> </span>
-                </a>
             </li>
             <li class="hide-phone app-search">
                 <form role="search" class="">

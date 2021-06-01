@@ -20,6 +20,7 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->string('password', 100);
             $table->string('gender', 45);
+            $table->string('document_type', 25);
             $table->string('document', 25);
             $table->string('phone', 15);
             $table->string('mobile', 25);

@@ -55,7 +55,7 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        //
+
     }
 
     /**
@@ -66,7 +66,10 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        //
+        $user = User::find($id);
+        $document_types = DocumentType::all();
+        $genders = Gender::all();
+        return view('pages.admin.user.edit',compact('user','genders','document_types'));
     }
 
     /**
@@ -78,7 +81,8 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $user = User::find($id)->update($request->all());
+        return back();
     }
 
     /**

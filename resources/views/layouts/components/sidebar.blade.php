@@ -66,7 +66,9 @@
                     <h6 class="menu-title">Revisión</h6>
                 </div>
                 <ul class="nav ">
-                    <li class="nav-item "><a class="nav-link" href="/analytics/analytics-index">Usuarios</a></li>
+                    <li class="nav-item "><a class="nav-link" href="{{ url('users') }}">Usuarios</a></li>
+                    <li class="nav-item "><a class="nav-link" href="{{ url('genders') }}">Géneros</a></li>
+                    <li class="nav-item "><a class="nav-link" href="{{ url('document_types') }}">Tipos de Documento</a></li>
                     <li class="nav-item "><a class="nav-link" href="/analytics/analytics-index">Perfil</a></li>
                     <li class="nav-item "><a class="nav-link" href="/analytics/analytics-customers">Incapacidades</a></li>
                     <li class="nav-item "><a class="nav-link" href="/analytics/analytics-reports">Certificados</a></li>

@@ -15,21 +15,26 @@ use App\Http\Controllers\DocumentTypeController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
+
+// Solo vistas con usuarios logueados
+Route::middleware(['auth:sanctum', 'verified'])->group(function(){
+    Route::get('/', function () {
+        return view('welcome');
+    });
+    Route::resource('users',UserController::class);
+    Route::resource('genders', GenderController::class);
+    Route::resource('document_types', DocumentTypeController::class);
+
+});
 
 
 Route::get('profile',function(){
   return view('profile');
 });
 
-Route::resource('users',UserController::class);
 
-Route::resource('genders', GenderController::class);
-
-Route::resource('document_types', DocumentTypeController::class);

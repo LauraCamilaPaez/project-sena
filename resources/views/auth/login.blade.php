@@ -36,9 +36,8 @@
                             </div>
                             <!--end auth-logo-text-->
 
-                            <form class="form-horizontal auth-form my-4" method="POST"
-                                  action="http://metrica.laravel.themesbrand.com/login">
-                                <input type="hidden" name="_token" value="dtr29aswyLW4o4s6HX843wewkSCdKpxTisM8KQPH">
+                            <form  class="form-horizontal auth-form my-4" method="post" action="{{ route('login') }}">
+                                @csrf
                                 <div class="form-group">
                                     <label for="username">Correo Electrónico</label>
                                     <div class="input-group mb-3">
@@ -46,7 +45,7 @@
                                             <i class="dripicons-user"></i>
                                         </span>
                                         <input id="email" type="email" placeholder="Escribe aquí el Correo" class="form-control "
-                                               name="email" value="" value="" required
+                                               name="email" value="" required
                                                autocomplete="email" autofocus>
 
 

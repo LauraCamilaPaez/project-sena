@@ -103,18 +103,20 @@
                    aria-haspopup="false" aria-expanded="false">
                     <img src="{{ url('img/profile-picture.png') }}" alt="profile-user"
                          class="rounded-circle"/>
-                    <span class="ml-1 nav-user-name hidden-sm">Sophia <i class="mdi mdi-chevron-down"></i> </span>
+                    <span class="ml-1 nav-user-name hidden-sm"> {{ @Auth::user()->names }} <i class="mdi mdi-chevron-down"></i> </span>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right">
                     <a class="dropdown-item" href="#"><i class="dripicons-gear text-muted mr-2"></i> Perfil </a>
                     <a class="dropdown-item" href="#"><i class="dripicons-gear text-muted mr-2"></i> Mis Certificados</a>
                     <a class="dropdown-item" href="#"><i class="dripicons-gear text-muted mr-2"></i> Mis Incapacidades</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="/logout"><i class="dripicons-exit text-muted mr-2"></i> Cerrar Sesión</a>
+                    <a class="dropdown-item" onclick="document.getElementById('logout').submit()"><i class="dripicons-exit text-muted mr-2"></i> Cerrar Sesión</a>
                 </div>
             </li>
         </ul><!--end topbar-nav-->
-
+        <form action="{{ route('logout') }}" method="post" id="logout">
+            @csrf
+        </form>
         <ul class="list-unstyled topbar-nav mb-0">
             <li>
                 <a href="/crm/crm-index">

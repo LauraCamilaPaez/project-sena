@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\GenderController;
 use App\Http\Controllers\DocumentTypeController;
+use App\Http\Controllers\CampusController;
+use App\Http\Controllers\TrainingCenterController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -29,6 +31,8 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function(){
     Route::resource('users',UserController::class);
     Route::resource('genders', GenderController::class);
     Route::resource('document_types', DocumentTypeController::class);
+    Route::resource('training_center', TrainingCenterController::class);
+    Route::resource('campus', CampusController::class);
 
 });
 

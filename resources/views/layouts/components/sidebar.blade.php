@@ -111,7 +111,7 @@
                     <li class="nav-item"><a class="nav-link" href="/pages/pages-tour">Ver</a></li>
                     <li class="nav-item"><a class="nav-link" href="/pages/pages-timeline">Editar</a></li>
                     <li class="nav-item"><a class="nav-link" href="/pages/pages-treeview">Eliminar</a></li>
-                    <li class="nav-item "><a class="nav-link" href="../contact">Contáctenos</a></li>
+                    <li class="nav-item "><a class="nav-link" href="{{ route('contact') }}">Contáctenos</a></li>
                 </ul>
             </div><!-- end Pages -->
             <div id="MetricaAuthentication" class="main-icon-menu-pane">
@@ -120,8 +120,8 @@
                 </div>
                 <ul class="nav">
                     <li class="nav-item"><a class="nav-link" href="/authentication/auth-login">SENALAB</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/authentication/auth-login-alt">SENA</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/authentication/auth-register">CEET</a></li>
+                    <li class="nav-item"><a class="nav-link" href="http://oferta.senasofiaplus.edu.co/sofia-oferta/" target="black">SENA</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://electricidadelectronicaytelecomu.blogspot.com/" target="black">CEET</a></li>
                     <li class="nav-item "><a class="nav-link" href="{{ route('contact') }}">CONTÁCTENOS</a></li>
                 </ul>
             </div><!-- end News-->

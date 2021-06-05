@@ -10,7 +10,7 @@
 
 <body>
 
-    {{-- Envió de imagen para el correo --}}
+    Envió de imagen para el correo --}}
     {{-- <tbody>
         <tr>
             <td>
@@ -51,7 +51,7 @@
                                                         <div style="line-height: 200%; text-align: center;">
                                                             <span
                                                                 style="font-size: 14px; font-family: Georgia, Palatino; color: #666666; line-height: 200%;">
-                                                                <em> --}}
+                                                                <em>
 
     <h1> Mensaje recibido de {{ $name }} </h1>
     <p><b>Nombre:</b> {{ $name }}</p>

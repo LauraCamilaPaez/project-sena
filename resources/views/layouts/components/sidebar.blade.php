@@ -63,11 +63,11 @@
         <div class="menu-body slimscroll">
             <div id="MetricaAnalytics" class="main-icon-menu-pane active">
                 <div class="title-box">
-                    <h6 class="menu-title">Revisión</h6>
+                    <h6 class="menu-title">Revisión Sale de sidebar.blade.php</h6>
                 </div>
                 <ul class="nav ">
                     <li class="nav-item "><a class="nav-link" href="/analytics/analytics-index">Usuarios</a></li>
-                    <li class="nav-item "><a class="nav-link" href="/analytics/analytics-index">Perfil</a></li>
+                    <li class="nav-item "><a class="nav-link" href="profile">Perfil</a></li>
                     <li class="nav-item "><a class="nav-link" href="/analytics/analytics-customers">Incapacidades</a></li>
                     <li class="nav-item "><a class="nav-link" href="/analytics/analytics-reports">Certificados</a></li>
                 </ul>
@@ -111,6 +111,7 @@
                     <li class="nav-item"><a class="nav-link" href="/pages/pages-tour">Ver</a></li>
                     <li class="nav-item"><a class="nav-link" href="/pages/pages-timeline">Editar</a></li>
                     <li class="nav-item"><a class="nav-link" href="/pages/pages-treeview">Eliminar</a></li>
+                    <li class="nav-item "><a class="nav-link" href="../contact">Contáctenos</a></li>
                 </ul>
             </div><!-- end Pages -->
             <div id="MetricaAuthentication" class="main-icon-menu-pane">
@@ -121,9 +122,10 @@
                     <li class="nav-item"><a class="nav-link" href="/authentication/auth-login">SENALAB</a></li>
                     <li class="nav-item"><a class="nav-link" href="/authentication/auth-login-alt">SENA</a></li>
                     <li class="nav-item"><a class="nav-link" href="/authentication/auth-register">CEET</a></li>
+                    <li class="nav-item "><a class="nav-link" href="{{ route('contact') }}">CONTÁCTENOS</a></li>
                 </ul>
             </div><!-- end News-->
         </div><!--end menu-body-->
     </div><!-- end main-menu-inner-->
 </div>
-<!-- end leftbar-tab-menu-->
+<!-- end leftbar-tab-menu--> 

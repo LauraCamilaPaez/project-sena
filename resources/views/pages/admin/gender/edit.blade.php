@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
 
-    <h1>Nuevo Género</h1>
+    <h1>Editar Género</h1>
     <div class="container mt-3">
         <form action="{{ route('genders.update', $gender->id) }}" method="post">
             @csrf

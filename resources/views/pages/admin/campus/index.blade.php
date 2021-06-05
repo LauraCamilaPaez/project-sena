@@ -25,7 +25,7 @@
                         <td>{{ $campus->phone }}</td>
                         <td name="buttons">
                             <div class=" pull-right">
-                                <a  href="" id="bEdit" type="button"
+                                <a  href="{{ route('campus.edit', $campus->id) }}" id="bEdit" type="button"
                                     class="btn btn-sm btn-soft-success btn-circle mr-2"
                                     onclick="rowEdit(this);">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"

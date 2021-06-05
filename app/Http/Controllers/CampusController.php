@@ -40,4 +40,10 @@ class CampusController extends Controller
         $campus = Campus::find($id)->update($request->all());
         return back();
     }
+
+    public function destroy($id)
+    {
+        $campus = Campus::find($id)->delete();
+        return back();
+    }
 }

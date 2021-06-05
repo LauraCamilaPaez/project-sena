@@ -33,7 +33,7 @@ class TrainingCenterController extends Controller
     public function update(Request $request, $id)
     {
         $training_center = TrainingCenter::find($id)->update($request->all());
-        return back;
+        return back();
     }
 
     public function destroy($id)

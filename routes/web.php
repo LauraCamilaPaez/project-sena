@@ -6,6 +6,8 @@ use App\Http\Controllers\GenderController;
 use App\Http\Controllers\DocumentTypeController;
 use App\Http\Controllers\CampusController;
 use App\Http\Controllers\TrainingCenterController;
+use App\Http\Controllers\GeneralObjectiveController;
+use App\Http\Controllers\SpecificObjectiveController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -33,6 +35,8 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function(){
     Route::resource('document_types', DocumentTypeController::class);
     Route::resource('training_center', TrainingCenterController::class);
     Route::resource('campus', CampusController::class);
+    Route::resource('general_objective', GeneralObjectiveController::class);
+    Route::resource('specific_objective', SpecificObjectiveController::class);
 
 });
 

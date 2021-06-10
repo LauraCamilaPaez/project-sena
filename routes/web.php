@@ -4,15 +4,12 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\GenderController;
 use App\Http\Controllers\DocumentTypeController;
-<<<<<<< HEAD
 use Illuminate\Support\Facades\Mail;
-=======
 use App\Http\Controllers\CampusController;
 use App\Http\Controllers\TrainingCenterController;
 use App\Http\Controllers\GeneralObjectiveController;
 use App\Http\Controllers\SpecificObjectiveController;
 use App\Http\Controllers\ContractController;
->>>>>>> 1f34cb6f515640f1a7e186f94b9a7ab0b7895f78
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -50,7 +47,6 @@ Route::get('profile',function(){
   return view('profile');
 });
 
-<<<<<<< HEAD
 Route::get('contacto', function () {
   return view('contact');
 })->name('contact');
@@ -94,6 +90,4 @@ Route::post('messages', function(){
   return back()->with('flash', $data['name'] .',  Tu mensaje ha sido recibido');
 
 })->name('messages');
-=======
 
->>>>>>> 1f34cb6f515640f1a7e186f94b9a7ab0b7895f78

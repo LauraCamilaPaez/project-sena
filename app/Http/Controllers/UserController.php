@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\DocumentType;
+use App\Models\Gender;
 use Illuminate\Http\Request;
 use App\Models\User;
 
@@ -27,7 +29,9 @@ class UserController extends Controller
      */
     public function create()
     {
-        //
+        $document_types = DocumentType::all();
+        $genders = Gender::all();
+        return view('pages.admin.user.create',compact('genders', 'document_types'));
     }
 
     /**
@@ -38,7 +42,9 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
+        $request['password'] = bcrypt($request->document);
         $user = User::create($request->all());
+        return back();
     }
 
     /**
@@ -49,7 +55,7 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        //
+
     }
 
     /**
@@ -60,7 +66,10 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        //
+        $user = User::find($id);
+        $document_types = DocumentType::all();
+        $genders = Gender::all();
+        return view('pages.admin.user.edit',compact('user','genders','document_types'));
     }
 
     /**
@@ -72,7 +81,8 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $user = User::find($id)->update($request->all());
+        return back();
     }
 
     /**

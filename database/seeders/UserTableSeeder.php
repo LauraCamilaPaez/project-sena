@@ -14,30 +14,54 @@ class UserTableSeeder extends Seeder
     public function run()
     {
         $user = User::create([
-            'name' => 'Administrador',
+            'names' => 'Administrador',
+            'lastnames' => 'Administrador',
             'email' => 'admin@gmail.com',
             'password' => bcrypt('12345a'),
+            'gender' => 1,
+            'document_type' => 1,
+            'document' => 111111,
+            'phone' => 567890,
+            'mobile' => 34567890,
         ]);
         $user->assignRole('Administrador');
 
         $user = User::create([
-            'name' => 'Contratista',
+            'names' => 'Contratista',
+            'lastnames' => 'Contratista',
             'email' => 'contratista@gmail.com',
             'password' => bcrypt('12345c'),
+            'gender' => 1,
+            'document_type' => 1,
+            'document' => 222222,
+            'phone' => 567890,
+            'mobile' => 34567890,
         ]);
         $user->assignRole('Contratista');
 
         $user = User::create([
-            'name' => 'Supervisor',
+            'names' => 'Supervisor',
             'email' => 'supervisor@gmail.com',
+            'lastnames' => 'supervisor@gmail.com',
             'password' => bcrypt('12345su'),
+            'gender' => 1,
+            'document_type' => 1,
+            'document' => 333333,
+            'phone' => 567890,
+            'mobile' => 34567890,
         ]);
         $user->assignRole('Supervisor');
 
         $user = User::create([
-            'name' => 'Secretario',
+            'names' => 'Secretario',
+            'lastnames' => 'Secretario',
             'email' => 'secretario@gmail.com',
             'password' => bcrypt('12345se'),
+            'gender' => 1,
+            'document_type' => 1,
+            'document' => 444444,
+            'phone' => 567890,
+            'mobile' => 34567890,
         ]);
         $user->assignRole('Secretario');
     }

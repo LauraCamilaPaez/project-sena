@@ -5,7 +5,12 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\GenderController;
 use App\Http\Controllers\DocumentTypeController;
 use App\Http\Controllers\CampusController;
+use App\Http\Controllers\IncapacidadesController;
 use App\Http\Controllers\TrainingCenterController;
+
+use Illuminate\Support\Facades\Mail;
+use App\Mail\IncapacidadesMailable; 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -33,12 +38,17 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function(){
     Route::resource('document_types', DocumentTypeController::class);
     Route::resource('training_center', TrainingCenterController::class);
     Route::resource('campus', CampusController::class);
-
 });
 
+    Route::get('incapacidades', [IncapacidadesController::class, 'index'] )->name('incapacidades.index');
 
-Route::get('profile',function(){
-  return view('profile');
-});
+    Route::post('incapacidades', [IncapacidadesController::class, 'store'] )->name('incapacidades.store');
+
+    
+    Route::get('profile',function(){
+    
+        return view('profile');
+    
+    });
 
 

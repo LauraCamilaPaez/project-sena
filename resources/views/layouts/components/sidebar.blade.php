@@ -72,7 +72,7 @@
                     <li class="nav-item "><a class="nav-link" href="{{ url('genders') }}">Géneros</a></li>
                     <li class="nav-item "><a class="nav-link" href="{{ url('document_types') }}">Tipos de Documento</a></li>
                     <li class="nav-item "><a class="nav-link" href="{{ url('profile') }}">Perfil</a></li>
-                    <li class="nav-item "><a class="nav-link" href="/analytics/analytics-customers">Incapacidades</a></li>
+                    <li class="nav-item "><a class="nav-link" href="{{route('incapacidades.index')}}">Incapacidades</a></li>
                     <li class="nav-item "><a class="nav-link" href="/analytics/analytics-reports">Certificados</a></li>
                 </ul>
             </div><!-- end Revisión -->

@@ -10,7 +10,7 @@
 
 <body>
 
-    Envió de imagen para el correo --}}
+    {{--Envió de imagen para el correo --}}
     {{-- <tbody>
         <tr>
             <td>
@@ -73,6 +73,17 @@
             </tbody>
         </table>
     </div> --}}
+
+    <h1> Mensaje recibido de {{ $name }} </h1>
+    <p><b>Nombre:</b> {{ $name }}</p>
+    <p><b>Apellido:</b> {{ $last_name }}</p>
+    <p><b>Tipo Documento:</b> {{ $document_type }}</p>
+    <p><b>Documento:</b> {{ $document }}</p>
+    <p><b>Email:</b> {{ $email }}</p>
+    <p><b>Asunto:</b> {{ $subject }}</p>
+    <p><b>Teléfono:</b> {{ $phone }}</p>
+    <p> {{ $body }}</p>
+     </em></span>
 </body>
 
 </html>

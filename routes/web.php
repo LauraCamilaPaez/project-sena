@@ -10,6 +10,7 @@ use App\Http\Controllers\TrainingCenterController;
 use App\Http\Controllers\GeneralObjectiveController;
 use App\Http\Controllers\SpecificObjectiveController;
 use App\Http\Controllers\ContractController;
+use App\Http\Controllers\InabilityController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -40,11 +41,16 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function(){
     Route::resource('general_objective', GeneralObjectiveController::class);
     Route::resource('specific_objective', SpecificObjectiveController::class);
     Route::resource('contracts', ContractController::class);
+    Route::resource('contracts', InabilityController::class);
 });
 
 
 Route::get('profile',function(){
   return view('profile');
+});
+
+Route::get('inability',function(){
+  return view('inability');
 });
 
 Route::get('contacto', function () {
@@ -60,6 +66,8 @@ Route::resource('users',UserController::class);
 Route::resource('genders', GenderController::class);
 
 Route::resource('document_types', DocumentTypeController::class);
+
+// Route::resource('inability',InabilityController::class);
 
 //Contáctanos
 // Route::get('/', function () {

@@ -20,18 +20,18 @@ class GenderController extends Controller
         return view('pages.admin.gender.create');
     }
 
-    //
+    
+      public function store(Request $request)
+      {
+         $gender = Gender::create($request->all());
+          return redirect()->route('genders.index')
+              ->with('status','Se ha creado correctamente el genero');
+     }
     // public function store(Request $request)
     // {
     //     $gender = Gender::create($request->all());
-    //     return redirect()->route('genders.index')
-    //         ->with('status','Se ha creado correctamente el genero');
+    //     return back();
     // }
-    public function store(Request $request)
-    {
-        $gender = Gender::create($request->all());
-        return back();
-    }
 
     public function edit($id)
     {

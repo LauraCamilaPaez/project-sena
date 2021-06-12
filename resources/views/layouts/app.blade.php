@@ -32,9 +32,6 @@
 
             <div class="row">
                 <div class="col-md-12">
-                    @yield('content')
-
-
                         <br>
                     <div class="card">
                         <div class="card-body">
@@ -48,8 +45,7 @@
                                 </div>
                             @endif
 
-                            @yield('content1')//Se Cambio este yield por content1 ya que generaba conflicto y dupicaba la info
-
+                            @yield('content')
                         </div>
                     </div>
                 </div>

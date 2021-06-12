@@ -63,19 +63,15 @@
         <div class="menu-body slimscroll">
             <div id="MetricaAnalytics" class="main-icon-menu-pane active">
                 <div class="title-box">
-                    <h6 class="menu-title">Revisión Sale de sidebar.blade.php</h6>
+                    <h6 class="menu-title">Revisión</h6>
                 </div>
                 <ul class="nav ">
-                    <li class="nav-item "><a class="nav-link" href="/analytics/analytics-index">Usuarios</a></li>
-                    <li class="nav-item "><a class="nav-link" href="profile">Perfil</a></li>
                     <li class="nav-item "><a class="nav-link" href="{{ url('users') }}">Usuarios</a></li>
                     <li class="nav-item "><a class="nav-link" href="{{ url('training_center') }}">Centros de Formación</a></li>
                     <li class="nav-item "><a class="nav-link" href="{{ url('campus') }}">Instalación</a></li>
                     <li class="nav-item "><a class="nav-link" href="{{ url('genders') }}">Géneros</a></li>
                     <li class="nav-item "><a class="nav-link" href="{{ url('document_types') }}">Tipos de Documento</a></li>
                     <li class="nav-item "><a class="nav-link" href="{{ url('profile') }}">Perfil</a></li>
-                    <li class="nav-item "><a class="nav-link" href="/analytics/analytics-customers">Incapacidades</a></li>
-                    <li class="nav-item "><a class="nav-link" href="/analytics/analytics-reports">Certificados</a></li>
                 </ul>
             </div><!-- end Revisión -->
 
@@ -134,4 +130,4 @@
         </div><!--end menu-body-->
     </div><!-- end main-menu-inner-->
 </div>
-<!-- end leftbar-tab-menu--> 
+<!-- end leftbar-tab-menu-->

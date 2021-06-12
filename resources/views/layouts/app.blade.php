@@ -48,7 +48,7 @@
                                 </div>
                             @endif
 
-                            @yield('content')
+                            @yield('content1')//Se Cambio este yield por content1 ya que generaba conflicto y dupicaba la info
 
                         </div>
                     </div>

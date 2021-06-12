@@ -34,6 +34,24 @@
                 <div class="col-md-12">
                     @yield('content')
 
+
+                        <br>
+                    <div class="card">
+                        <div class="card-body">
+                            @if(session('status'))
+                                <br>
+                                <div class="alert alert-outline-success alert-warning-shadow mb-0 alert-dismissible fade show" role="alert">
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                        <span aria-hidden="true"><i class="mdi mdi-close"></i></span>
+                                    </button>
+                                    <strong>Bien hecho!</strong> {{ session('status') }}
+                                </div>
+                            @endif
+
+                            @yield('content')
+
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

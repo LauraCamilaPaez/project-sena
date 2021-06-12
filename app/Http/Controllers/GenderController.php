@@ -21,6 +21,12 @@ class GenderController extends Controller
     }
 
     //
+    // public function store(Request $request)
+    // {
+    //     $gender = Gender::create($request->all());
+    //     return redirect()->route('genders.index')
+    //         ->with('status','Se ha creado correctamente el genero');
+    // }
     public function store(Request $request)
     {
         $gender = Gender::create($request->all());

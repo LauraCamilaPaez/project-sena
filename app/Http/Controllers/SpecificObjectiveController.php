@@ -21,7 +21,8 @@ class SpecificObjectiveController extends Controller
     public function store(Request $request)
     {
         $specific_objectives = SpecificObjective::create($request->all());
-        return back();
+        return redirect()->route('specific_objective.index')
+            ->with('status', 'Se ha creado el Objetivo Específico correctamente.');
     }
 
     public function edit($id)
@@ -33,7 +34,10 @@ class SpecificObjectiveController extends Controller
     public function update(Request $request, $id)
     {
         $specific_objectives = SpecificObjective::find($id)->update($request->all());
-        return back();
+        return back()->with([
+            'status'=>'Se ha editado el Objetivo Específico correctamente',
+            'type'=>'warning',
+        ]);
     }
 
 

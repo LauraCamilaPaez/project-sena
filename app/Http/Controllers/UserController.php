@@ -44,7 +44,8 @@ class UserController extends Controller
     {
         $request['password'] = bcrypt($request->document);
         $user = User::create($request->all());
-        return back();
+        return redirect()->route('users.index')
+            ->with('status', 'Se ha creado el Usuario correctamente');
     }
 
     /**
@@ -82,7 +83,10 @@ class UserController extends Controller
     public function update(Request $request, $id)
     {
         $user = User::find($id)->update($request->all());
-        return back();
+        return back()->with([
+            'status' => 'Se ha editado el Usuario correctamente.',
+            'type' => 'warning',
+        ]);
     }
 
     /**
@@ -94,6 +98,9 @@ class UserController extends Controller
     public function destroy($id)
     {
         $user = User::find($id)->delete();
-        return back();
+        return back()->with([
+            'status' => 'Se ha eliminado el Usuario correctamente.',
+            'type' => 'danger',
+        ]);
     }
 }

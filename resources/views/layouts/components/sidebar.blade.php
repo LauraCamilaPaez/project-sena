@@ -124,7 +124,6 @@
                     <li class="nav-item"><a class="nav-link" href="/authentication/auth-login">SENALAB</a></li>
                     <li class="nav-item"><a class="nav-link" href="http://oferta.senasofiaplus.edu.co/sofia-oferta/" target="black">SENA</a></li>
                     <li class="nav-item"><a class="nav-link" href="https://electricidadelectronicaytelecomu.blogspot.com/" target="black">CEET</a></li>
-                    <li class="nav-item "><a class="nav-link" href="{{ route('contact') }}">CONTÁCTENOS</a></li>
                 </ul>
             </div><!-- end News-->
         </div><!--end menu-body-->

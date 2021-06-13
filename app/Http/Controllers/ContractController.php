@@ -21,7 +21,8 @@ class ContractController extends Controller
     public function store(Request $request)
     {
         $contracts = Contract::create($request->all());
-        return back();
+        return redirect()->route('contracts.index')
+            ->with('status', 'Se ha creado el Contrato correctamente.');
     }
 
     public function edit($id)
@@ -33,6 +34,9 @@ class ContractController extends Controller
     public function update(Request $request, $id)
     {
         $contracts = Contract::find($id)->update($request->all());
-        return back();
+        return back()->with([
+            'status' => 'Se ha editado el Contrato correctamente.',
+            'type' => 'warning',
+        ]);
     }
 }

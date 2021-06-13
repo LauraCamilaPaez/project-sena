@@ -104,7 +104,7 @@
 
                         <div class="m-3 text-center text-muted">
                             <p class="">¿Aún no tienes una cuenta? <a
-                                    href="http://metrica.laravel.themesbrand.com/register" class="text-primary ml-2">Registrate
+                                    href="{{ route('register') }}" class="text-primary ml-2">Registrate
                                 gratis</a></p>
                         </div>
                     </div>

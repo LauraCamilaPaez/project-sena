@@ -42,13 +42,19 @@ class GenderController extends Controller
     public function update(Request $request, $id)
     {
         $gender = Gender::find($id)->update($request->all());
-        return back();
+        return back()->with([
+            'status'=>'Se ha editado el Género correctamente',
+            'type'=>'warning',
+        ]);
     }
 
     //Destroy a register in the DB for $id
     public function destroy($id)
     {
-        $gender = Gender::find($id)->delete();
-        return back();
+        $genders = Gender::find($id)->delete();
+        return back()->with([
+            'status'=>'Se ha eliminado el Género correctamente',
+            'type'=>'danger',
+            ]);
     }
 }

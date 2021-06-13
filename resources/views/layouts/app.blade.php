@@ -32,15 +32,12 @@
 
             <div class="row">
                 <div class="col-md-12">
-                    @yield('content')
-
-
                         <br>
                     <div class="card">
                         <div class="card-body">
                             @if(session('status'))
                                 <br>
-                                <div class="alert alert-outline-success alert-warning-shadow mb-0 alert-dismissible fade show" role="alert">
+                                <div class="alert alert-outline-{{ is_null(session('type')) ? 'success' : session('type') }} alert-warning-shadow mb-0 alert-dismissible fade show" role="alert">
                                     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                         <span aria-hidden="true"><i class="mdi mdi-close"></i></span>
                                     </button>

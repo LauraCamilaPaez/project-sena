@@ -87,7 +87,7 @@ Route::resource('document_types', DocumentTypeController::class);
 // })->name('inisesion');
 
 Route::post('messages', function(){
-  //enviar correo 
+  //enviar correo
   $data = request()->all();
   Mail::send("emails.message", $data, function($message) use ($data) {
       $message->from($data['email'], $data['name'])

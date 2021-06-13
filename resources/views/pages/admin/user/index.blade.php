@@ -2,7 +2,6 @@
 @section('content')
     <div class="row">
         <div class="col-sm-12">
-
             <div class="page-title-box">
                 <div class="float-right">
                     <ol class="breadcrumb">

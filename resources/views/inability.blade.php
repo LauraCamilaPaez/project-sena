@@ -21,7 +21,7 @@
                 @endif
                 
                 <br>
-                <form id="contactForm" name="sentMessage" method="post" action="{{ route('messages') }}" role="form">
+                <form id="inabilityForm" name="sentMessage" method="post" action="{{ route('messages') }}" role="form">
                     {{ csrf_field() }}
                     <div class="row align-items-stretch mb-5">
                         <div class="col-md-6">

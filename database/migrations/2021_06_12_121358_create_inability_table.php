@@ -44,3 +44,4 @@ class CreateInabilityTable extends Migration
         Schema::dropIfExists('inability');
     }
 }
+

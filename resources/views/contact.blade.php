@@ -21,7 +21,7 @@
                 @endif
                 
                 <br>
-                <form id="contactForm" name="sentMessage" method="post" action="{{ route('messages') }}" role="form">
+                <form id="contactForm" name="sentMessage" method="post" action="{{ route('messagescontact') }}" role="form">
                     {{ csrf_field() }}
                     <div class="row align-items-stretch mb-5">
                         <div class="col-md-6">
@@ -46,19 +46,19 @@
 
                             </div>
 
-                            {{-- <div class="form-group mb-md-0">
-                                <input class="form-control" id="phone" type="tel" placeholder="Teléfono *"
+                            <div class="form-group mb-md-0">
+                                <input class="form-control" name="phone" id="phone" type="tel" placeholder="Teléfono *"
                                     required="required"
                                     data-validation-required-message="Please enter your phone number." />
                                 <p class="help-block text-danger"></p>
-                            </div> --}}
+                            </div> 
                         </div>
 
                         <div class="col-md-6">
                             <div class="form-group form-group-textarea mb-md-0 wow fadeInDown" data-wow-duration="500ms"
                                 data-wow-delay="1.2s">
                                 <textarea rows="6" placeholder="Message" class="form-control" name="body"
-                                    id="message"></textarea>
+                                    id="messagescontact"></textarea>
                             </div>
                         </div>
 

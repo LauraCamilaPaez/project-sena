@@ -41,7 +41,7 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function(){
     Route::resource('general_objective', GeneralObjectiveController::class);
     Route::resource('specific_objective', SpecificObjectiveController::class);
     Route::resource('contracts', ContractController::class);
-    Route::resource('contracts', InabilityController::class);
+    Route::resource('inability', InabilityController::class);
 });
 
 
@@ -91,11 +91,24 @@ Route::post('messages', function(){
   $data = request()->all();
   Mail::send("emails.message", $data, function($message) use ($data) {
       $message->from($data['email'], $data['name'])
-          ->to('dprueba029@gmail.com', 'Diego')
+          ->to('dprueba029@gmail.com', 'Diego') 
+          ->subject($data['subject']);
+  });
+  //responder al usuario
+  return back()->with('flash', $data['name'] .',  Tu incapacidad ha sido recibida');
+
+})->name('messages');
+
+//mensaje para contáctanos
+Route::post('messagescontact', function(){
+  //enviar correo 
+  $data = request()->all();
+  Mail::send("emails.messagecontact", $data, function($messagescontact) use ($data) {
+      $messagescontact->from($data['email'], $data['name'])
+          ->to('dprueba029@gmail.com', 'Diego') 
           ->subject($data['subject']);
   });
   //responder al usuario
   return back()->with('flash', $data['name'] .',  Tu mensaje ha sido recibido');
 
-})->name('messages');
-
+})->name('messagescontact');

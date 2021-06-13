@@ -63,7 +63,7 @@
         <div class="menu-body slimscroll">
             <div id="MetricaAnalytics" class="main-icon-menu-pane active">
                 <div class="title-box">
-                    <h6 class="menu-title">Revisión Sale de sidebar.blade.php</h6>
+                    <h6 class="menu-title">Revisión</h6>
                 </div>
                 <ul class="nav ">
                     <li class="nav-item "><a class="nav-link" href="/">Inicio</a></li>
@@ -125,7 +125,7 @@
                     <h6 class="menu-title">Authentication</h6>
                 </div>
                 <ul class="nav">
-                    <li class="nav-item"><a class="nav-link" href="/authentication/auth-login">SENALAB</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/">SENALAB</a></li>
                     <li class="nav-item"><a class="nav-link" href="http://oferta.senasofiaplus.edu.co/sofia-oferta/" target="black">SENA</a></li>
                     <li class="nav-item"><a class="nav-link" href="https://electricidadelectronicaytelecomu.blogspot.com/" target="black">CEET</a></li>
                     <li class="nav-item "><a class="nav-link" href="{{ route('contact') }}">CONTÁCTENOS</a></li>

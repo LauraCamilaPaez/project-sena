@@ -137,7 +137,7 @@
                     <h6 class="menu-title">Noticias y Contacto</h6>
                 </div>
                 <ul class="nav">
-                    <li class="nav-item"><a class="nav-link" href="/authentication/auth-login">SENALAB</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ url('news') }}">SENALAB</a></li>
                     <li class="nav-item"><a class="nav-link" href="http://oferta.senasofiaplus.edu.co/sofia-oferta/" target="black">SENA</a></li>
                     <li class="nav-item"><a class="nav-link" href="https://electricidadelectronicaytelecomu.blogspot.com/" target="black">CEET</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{ route('contact') }}">Contáctenos</a></li>

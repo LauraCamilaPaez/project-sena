@@ -10,6 +10,7 @@ use App\Http\Controllers\TrainingCenterController;
 use App\Http\Controllers\GeneralObjectiveController;
 use App\Http\Controllers\SpecificObjectiveController;
 use App\Http\Controllers\ContractController;
+use App\Http\Controllers\NewsController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -40,6 +41,7 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function(){
     Route::resource('general_objective', GeneralObjectiveController::class);
     Route::resource('specific_objective', SpecificObjectiveController::class);
     Route::resource('contracts', ContractController::class);
+    Route::resource('news', NewsController::class);
 });
 
 

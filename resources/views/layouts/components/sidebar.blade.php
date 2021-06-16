@@ -136,10 +136,16 @@
                 <div class="title-box">
                     <h6 class="menu-title">Noticias y Contacto</h6>
                 </div>
+                <ul class="nav metismenu">
+                    <li class="nav-item">
+                        <a class="nav-link" href="javascript: void(0);"><span class="w-100">Revisión</span><span
+                                class="menu-arrow"><i class="mdi mdi-chevron-right"></i></span></a>
+                        <ul class="nav-second-level" aria-expanded="false">
+                            <li><a href="{{ url('news') }}">Noticias</a></li>
+                        </ul>
+                    </li><!--end nav-item-->
+                </ul>
                 <ul class="nav">
-                    <li class="nav-item"><a class="nav-link" href="{{ url('news') }}">SENALAB</a></li>
-                    <li class="nav-item"><a class="nav-link" href="http://oferta.senasofiaplus.edu.co/sofia-oferta/" target="black">SENA</a></li>
-                    <li class="nav-item"><a class="nav-link" href="https://electricidadelectronicaytelecomu.blogspot.com/" target="black">CEET</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{ route('contact') }}">Contáctenos</a></li>
                 </ul>
             </div><!-- end News-->

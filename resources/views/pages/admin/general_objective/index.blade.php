@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('content')
+@section('content1')
 
     <h1>Objetivos Generales del Contrato</h1>
     <p>Aquí podrás encontrar todos los objetivos generales del contrato en el sistema.</p>

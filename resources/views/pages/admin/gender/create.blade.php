@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('content')
+@section('content1')
 
     <h1>Nuevo Género</h1>
     <p>Crea un nuevo género en el sistema.</p>

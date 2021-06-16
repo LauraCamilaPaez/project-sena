@@ -1,6 +1,6 @@
 
 @extends('layouts.app')
-@section('content')
+@section('content1')
 
     <h1>Actualizar Usuario</h1>
     <div class="container mt-3">

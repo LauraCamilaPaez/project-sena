@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('content')
+@section('content1')
 
     <h1>Objetivos Específicos del Contrato</h1>
     <p>Aquí podrás encontrar todos los objetivos específicos del contrato en el sistema.</p>

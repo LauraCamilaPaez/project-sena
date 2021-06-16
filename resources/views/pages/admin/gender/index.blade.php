@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('content')
+@section('content1')
 
     <h1>Géneros</h1>
     <p>Aquí podrás encontrar todos los géneros almacenados en el sistema.</p>

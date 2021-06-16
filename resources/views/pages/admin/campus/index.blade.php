@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('content')
+@section('content1')
 
     <h1>Instalaciones</h1>
     <p>Aquí podrás encontrar todas las instalaciones que manejará el sistema.</p>

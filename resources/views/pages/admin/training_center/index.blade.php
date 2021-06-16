@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('content')
+@section('content1')
 
     <h1>Centros de Formación</h1>
     <p>Aquí podrás encontrar todos los centros de Formación del sistema.</p>

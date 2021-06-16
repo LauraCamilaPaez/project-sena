@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('content')
+@section('content1')
 
     <body id="page-top">
         <!-- Contact-->

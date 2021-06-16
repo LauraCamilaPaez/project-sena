@@ -1,9 +1,12 @@
 @extends('layouts.app')
 @section('content')
 
+
     <h1>Géneros</h1>
     <p>Aquí podrás encontrar todos los géneros almacenados en el sistema.</p>
+        @role('Administrador')
     <a href="{{ route('genders.create') }}" class="btn btn-primary btn-sm" href="">Crear Nuevo</a>
+    @endrole
     <div class="card-body">
         <div class="table-sm table-responsive">
             <table class="table table-bordered table-striped table-hover">
@@ -11,7 +14,9 @@
                     <tr class="bg-beanred text-white">
                         <th>#</th>
                         <th>Género</th>
+                        @role('Administrador')
                         <th>Acciones</th>
+                        @endrole
                     </tr>
                 </thead>
                 <tbody>
@@ -19,6 +24,7 @@
                     <tr class="active">
                         <td>{{ $loop->iteration }}</td>
                         <td>{{ $gender->gender }}</td>
+                        @role('Administrador')
                         <td name="buttons">
                             <div class=" pull-right">
                                 <a  href="{{ route('genders.edit', $gender->id) }}" id="bEdit" type="button"
@@ -57,6 +63,7 @@
                                         class="dripicons-cross" aria-hidden="true"></i></button>
                             </div>
                         </td>
+                        @endrole
                     </tr>
                 @endforeach
                 </tbody>

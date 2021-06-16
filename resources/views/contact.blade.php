@@ -10,7 +10,7 @@
                     <h2 class="section-heading text-uppercase">Contáctenos</h2>
                     <h3 class="section-subheading text-muted">Para tener el gusto de atenderlo.</h3>
                 </div>
-                
+
                 @if (session()->has('flash'))
                 <div class="alert alert-success alert-dismissible" role="alert">
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -19,7 +19,7 @@
                     {{session()->get('flash')}}
                 </div>
                 @endif
-                
+
                 <br>
                 <form id="contactForm" name="sentMessage" method="post" action="{{ route('messages') }}" role="form">
                     {{ csrf_field() }}
@@ -71,5 +71,5 @@
             </div>
             </form>
             </div><br>
-            @include('layouts.components.footer')
+
     @stop

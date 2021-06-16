@@ -3,7 +3,9 @@
 
     <h1>Tipos de Documento</h1>
     <p>Aquí podrás encontrar todos los tipos de documento del sistema.</p>
+    @role('Administrador')
     <a class="btn btn-primary btn-sm" href="{{ route('document_types.create') }}">Crear Nuevo</a>
+    @endrole
     <div class="card-body">
         <div class="table-sm table-responsive">
             <table class="table table-bordered table-striped table-hover">
@@ -11,7 +13,9 @@
                 <tr class="bg-beanred text-white">
                     <th>#</th>
                     <th>Tipo de Documento</th>
+                    @role('Administrador')
                     <th>Acciones</th>
+                    @endrole
                 </tr>
                 </thead>
                 <tbody>
@@ -19,6 +23,7 @@
                     <tr class="active">
                         <td>{{ $loop->iteration }}</td>
                         <td>{{ $document_type->document_type }}</td>
+                        @role('Administrador')
                         <td name="buttons">
                             <div class=" pull-right">
                                 <a  href="{{ route('document_types.edit', $document_type->id) }}" id="bEdit" type="button"
@@ -57,6 +62,7 @@
                                         class="dripicons-cross" aria-hidden="true"></i></button>
                             </div>
                         </td>
+                        @endrole
                     </tr>
                 @endforeach
                 </tbody>

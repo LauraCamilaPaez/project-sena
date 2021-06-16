@@ -23,6 +23,9 @@ class UserTableSeeder extends Seeder
             'document' => 111111,
             'phone' => 567890,
             'mobile' => 34567890,
+            'status' => 1,
+            'profile_picture' => 'Hola',
+            'role_id' => 1,
         ]);
         $user->assignRole('Administrador');
 
@@ -36,19 +39,25 @@ class UserTableSeeder extends Seeder
             'document' => 222222,
             'phone' => 567890,
             'mobile' => 34567890,
+            'status' => 1,
+            'profile_picture' => 'Hola',
+            'role_id' => 2,
         ]);
         $user->assignRole('Contratista');
 
         $user = User::create([
             'names' => 'Supervisor',
+            'lastnames' => 'Supervisor',
             'email' => 'supervisor@gmail.com',
-            'lastnames' => 'supervisor@gmail.com',
             'password' => bcrypt('12345su'),
             'gender' => 1,
             'document_type' => 1,
             'document' => 333333,
             'phone' => 567890,
             'mobile' => 34567890,
+            'status' => 1,
+            'profile_picture' => 'Hola',
+            'role_id' => 3,
         ]);
         $user->assignRole('Supervisor');
 
@@ -62,6 +71,10 @@ class UserTableSeeder extends Seeder
             'document' => 444444,
             'phone' => 567890,
             'mobile' => 34567890,
+            'status' => 1,
+            'profile_picture' => 'Hola',
+            'role_id' => 4,
+
         ]);
         $user->assignRole('Secretario');
     }

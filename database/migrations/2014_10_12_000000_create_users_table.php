@@ -24,6 +24,9 @@ class CreateUsersTable extends Migration
             $table->string('document', 25);
             $table->string('phone', 15);
             $table->string('mobile', 25);
+            $table->boolean('status');
+            $table->string('profile_picture');
+            $table->unsignedBigInteger('role_id');
             $table->rememberToken();
             $table->timestamp('email_verified_at')->nullable();
             $table->foreignId('current_team_id')->nullable();

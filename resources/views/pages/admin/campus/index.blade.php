@@ -3,7 +3,9 @@
 
     <h1>Instalaciones</h1>
     <p>Aquí podrás encontrar todas las instalaciones que manejará el sistema.</p>
+    @role('Administrador')
     <a class="btn btn-primary btn-sm" href="{{ route('campus.create') }}">Crear Nuevo</a>
+    @endrole
     <div class="card-body">
         <div class="table-sm table-responsive">
             <table class="table table-bordered table-striped table-hover">
@@ -13,7 +15,9 @@
                     <th>Instalación</th>
                     <th>Dirección</th>
                     <th>Teléfono</th>
+                    @role('Administrador')
                     <th>Acciones</th>
+                    @endrole
                 </tr>
                 </thead>
                 <tbody>
@@ -23,6 +27,7 @@
                         <td>{{ $campus->name }}</td>
                         <td>{{ $campus->address }}</td>
                         <td>{{ $campus->phone }}</td>
+                        @role('Administrador')
                         <td name="buttons">
                             <div class=" pull-right">
                                 <a  href="{{ route('campus.edit', $campus->id) }}" id="bEdit" type="button"
@@ -61,6 +66,7 @@
                                         class="dripicons-cross" aria-hidden="true"></i></button>
                             </div>
                         </td>
+                        @endrole
                     </tr>
                 </tbody>
                 @endforeach

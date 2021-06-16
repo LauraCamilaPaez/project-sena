@@ -11,6 +11,7 @@ use App\Http\Controllers\GeneralObjectiveController;
 use App\Http\Controllers\SpecificObjectiveController;
 use App\Http\Controllers\ContractController;
 use App\Http\Controllers\InabilityController;
+use App\Http\Controllers\NewsController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -42,6 +43,7 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function(){
     Route::resource('specific_objective', SpecificObjectiveController::class);
     Route::resource('contracts', ContractController::class);
     Route::resource('inability', InabilityController::class);
+    Route::resource('news', NewsController::class);
 });
 
 

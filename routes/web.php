@@ -40,6 +40,7 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function(){
     Route::resource('campus', CampusController::class);
     Route::resource('general_objective', GeneralObjectiveController::class);
     Route::resource('specific_objective', SpecificObjectiveController::class);
+    Route::get('list-contract', [ContractController::class,'listContracts']);
     Route::resource('contracts', ContractController::class);
     Route::resource('news', NewsController::class);
 });

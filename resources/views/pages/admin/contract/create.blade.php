@@ -8,8 +8,12 @@
             <div class="row">
                 <div class="col-md-4">
                     <div class="form-group">
-                        <label for="">Código</label>
-                        <input type="text" class="form-control" name="code" id="code">
+                        <label for="">User</label>
+                        <select name="user_id" id="user_id" class="form-control">
+                            @foreach($users as $user)
+                            <option value="{{ $user->id }}">{{ $user->names }}</option>
+                            @endforeach
+                        </select>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -28,14 +32,14 @@
             <div class="row">
                 <div class="col-md-4">
                     <div class="form-group">
-                        <label for="">Valor</label>
+                        <label for="">Valor del contrato</label>
                         <input type="number" class="form-control" name="value" id="value">
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="form-group">
                         <label for="phone">Pdf</label>
-                        <input type="text" class="form-control" name="pdf_contract" id="pdf_contract">
+                        <input type="text" class="form-control" name="pdf" id="pdf">
                     </div>
                 </div>
             </div>

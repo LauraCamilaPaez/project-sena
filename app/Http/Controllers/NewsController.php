@@ -9,7 +9,8 @@ class NewsController extends Controller
 {
     public function index()
     {
-        $news = News::all();
+        $news = News::whereStatus(1)->get();
+        //$news = News::where('status',1)->get();
         return view('pages.admin.news.index', compact('news'));
     }
 

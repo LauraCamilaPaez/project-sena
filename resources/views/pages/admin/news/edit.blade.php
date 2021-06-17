@@ -25,7 +25,7 @@
             </div>
             <div class="form-group">
                 <label for="content">Contenido</label>
-                <textarea class="form-control" rows="5" id="content" name="content" value="{{ $new->content }}" required></textarea>
+                <textarea class="form-control" rows="5" id="content" name="content"  required>{{ $new->content }}</textarea>
             </div>
             <div class="row">
                 <div class="col-md-4">
@@ -41,9 +41,8 @@
                     <label for="status">Estado</label>
                     <select name="status" id="status" class="form-control">
                         <option value="">Seleccionar...</option>
-                        @foreach($news as $new)
-                            <option value="{{ $new->id }}" selected>{{ $new->status }}</option>
-                        @endforeach
+                        <option value="1" {{ $new->status == 1 ? 'selected' : '' }}>Activo</option>
+                        <option value="0" {{ $new->status == 0 ? 'selected' : '' }}>Inactivo</option>
                     </select>
                 </div>
             </div>

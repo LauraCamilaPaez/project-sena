@@ -10,10 +10,15 @@ class Contract extends Model
     use HasFactory;
 
     protected $fillable = [
-        'code',
         'date_start',
         'date_end',
         'value',
-        'pdf_contract'
+        'pdf',
+        'user_id',
     ];
+
+    public function users()
+    {
+        return $this->belongsTo('App\Models\User', 'user_id');
+    }
 }

@@ -38,11 +38,10 @@
             <div class="col-md-4">
                 <div class="form-group">
                     <label for="status">Estado</label>
-                    <select name="status" id="status" class="form-control">
+                    <select name="status" id="status" class="form-control" required>
                         <option value="" selected>Seleccionar...</option>
-                        @foreach($news as $new)
-                            <option value="{{ $new->id }}">{{ $new->status }}</option>
-                        @endforeach
+                            <option value="1">Activo</option>
+                            <option value="0">Inactivo</option>
                     </select>
                 </div>
             </div>

@@ -9,7 +9,7 @@
             <div class="row">
                 <div class="col-md-4">
                     <div class="form-group">
-                        <label for="">Código</label>
+                        <label for="">Usuario</label>
                         <input type="text" class="form-control" name="code" id="code" value="{{ $contracts->code }}">
                     </div>
                 </div>
@@ -36,7 +36,7 @@
                 <div class="col-md-4">
                     <div class="form-group">
                         <label for="phone">Pdf</label>
-                        <input type="text" class="form-control" name="pdf_contract" id="pdf_contract" value="{{ $contracts->pdf_contract }}">
+                        <input type="text" class="form-control" name="pdf_contract" id="pdf_contract" value="{{ $contracts->pdf}}">
                     </div>
                 </div>
             </div>

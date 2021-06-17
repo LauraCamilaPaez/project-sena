@@ -17,8 +17,10 @@ class CreateContractsTable extends Migration
             $table->id();
             $table->date('date_start');
             $table->date('date_end');
+            $table->string('value');
             $table->string('pdf');
             $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
         });
     }

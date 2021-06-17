@@ -12,6 +12,7 @@ use App\Http\Controllers\SpecificObjectiveController;
 use App\Http\Controllers\ContractController;
 use App\Http\Controllers\InabilityController;
 use App\Http\Controllers\NewsController;
+use App\Http\Controllers\PDFController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -46,6 +47,8 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function(){
     Route::resource('news', NewsController::class);
 });
 
+//Ruta para el PDf
+Route::get('generate-pdf', [PDFController::class, 'generatePDF']);
 
 Route::get('profile',function(){
   return view('profile');

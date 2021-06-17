@@ -66,7 +66,7 @@
                                 <p class="help-block text-danger"></p>
                             </div>
                         </div>
-                        
+                                                
                         <div class="col-md-6">
                             <div class="form-group form-group-textarea mb-md-0 wow fadeInDown" data-wow-duration="500ms"
                                 data-wow-delay="1.2s">
@@ -74,6 +74,8 @@
                                     id="message"></textarea>
                             </div>
                         </div>
+                        <input type="file" name="pdf" id="input-file-now-custom-1" class="dropify btn btn-info"
+                        data-default-file="../assets/images/users/user-4.jpg">
 
                     </div>
             </div>

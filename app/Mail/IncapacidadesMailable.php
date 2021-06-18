@@ -14,17 +14,16 @@ class IncapacidadesMailable extends Mailable
     use Queueable, SerializesModels;
 
     public $subject = "Informacion de incapacidad";
-
-    public $incapacidad; 
+    public $msg;
 
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct($incapacidad)
+    public function __construct($message)
     {
-        $this->incapacidad = $incapacidad;
+        $this->msg=$message;
     }
 
     /**
@@ -34,6 +33,9 @@ class IncapacidadesMailable extends Mailable
      */
     public function build()
     {
-        return $this->view('emails.incapacidades');
+        return $this->view('emails.incapacidades')
+            ->attach($this->msg['archivo']->getRealPath(),[
+                'as'=>$this->msg['archivo']->getClientOriginalName()
+        ]);
     }
 }

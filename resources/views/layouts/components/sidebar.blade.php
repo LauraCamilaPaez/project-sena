@@ -107,11 +107,11 @@
                 <ul class="nav">
                     <li class="nav-item"><a class="nav-link" href="/pages/pages-tour">Ver</a></li>
                     @role('Administrador')
-                    <li class="nav-item"><a class="nav-link" href="/pages/pages-profile">Crear</a></li>
+                    {{--  <li class="nav-item"><a class="nav-link" href="/pages/pages-profile">Crear</a></li>
                     <li class="nav-item"><a class="nav-link" href="/pages/pages-timeline">Editar</a></li>
                     @role('Secretario|Administrador')
-                    <li class="nav-item"><a class="nav-link" href="/pages/pages-treeview">Eliminar</a></li>
-                    @endrole
+                    <li class="nav-item"><a class="nav-link" href="/pages/pages-treeview">Eliminar</a></li>  --}}
+                    {{--  @endrole  --}}
                     @endrole
 
 
@@ -150,8 +150,8 @@
                     </li><!--end nav-item-->
                 </ul>
                 <ul class="nav">
-                    <li class="nav-item"><a class="nav-link" href="/">SENALAB</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{{ url('news') }}">SENALAB</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/">Inicio</a></li>
+                    {{--  <li class="nav-item"><a class="nav-link" href="{{ url('news') }}">SENALAB</a></li>  --}}
                     <li class="nav-item"><a class="nav-link" href="http://oferta.senasofiaplus.edu.co/sofia-oferta/" target="black">SENA</a></li>
                     <li class="nav-item"><a class="nav-link" href="https://electricidadelectronicaytelecomu.blogspot.com/" target="black">CEET</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{ route('contact') }}">Contáctenos</a></li>

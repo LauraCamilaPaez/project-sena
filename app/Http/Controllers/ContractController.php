@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Contract;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ContractController extends Controller
 {
@@ -15,7 +17,8 @@ class ContractController extends Controller
 
     public function create()
     {
-        return view('pages.admin.contract.create');
+        $users =User::all();
+        return view('pages.admin.contract.create',compact('users'));
     }
 
     public function store(Request $request)
@@ -38,5 +41,11 @@ class ContractController extends Controller
             'status' => 'Se ha editado el Contrato correctamente.',
             'type' => 'warning',
         ]);
+    }
+    //listar contratos asociados a un usuario
+    public function listContracts(){
+        $user = Auth::user();
+        $contracts = Contract::where('user_id',$user->id)->get();
+        return view('pages.users.contract.list_contract', compact('contracts'));
     }
 }

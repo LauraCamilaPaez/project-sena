@@ -10,10 +10,10 @@
                 <thead>
                 <tr class="bg-beanred text-white">
                     <th>#</th>
-                    <th>Código</th>
+                    <th>Nombre</th>
                     <th>Fecha Inicio</th>
                     <th>Fecha Fin</th>
-                    <th>Valor</th>
+                    <th>Valor del Contrato</th>
                     <th>Pdf</th>
                     <th>Acciones</th>
                 </tr>
@@ -22,11 +22,11 @@
                 @foreach($contracts as $contract)
                     <tr class="active">
                         <td>{{ $loop->iteration }}</td>
-                        <td>{{ $contract->code }}</td>
+                        <td>{{ $contract->names }}</td>
                         <td>{{ $contract->date_start }}</td>
                         <td>{{ $contract->date_end }}</td>
-                        <td>{{ $contract->value }}</td>
-                        <td>{{ $contract->pdf_contract }}</td>
+                        <td>{{ $contract->value}}</td>
+                        <td>{{ $contract->pdf}}</td>
                         <td name="buttons">
                             <div class=" pull-right">
                                 <a  href="{{ route('contracts.edit', $contract->id) }}" id="bEdit" type="button"

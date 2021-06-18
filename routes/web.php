@@ -13,6 +13,7 @@ use App\Http\Controllers\ContractController;
 use App\Http\Controllers\InabilityController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\PDFController;
+use App\Http\Controllers\StatusCertificateController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -35,6 +36,8 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function(){
     Route::get('/', function () {
         return view('welcome');
     });
+    Route::get('users/edit-profile', [UserController::class, 'edit_profile']);
+    Route::put('users/update-profile', [UserController::class, 'update_profile']);
     Route::resource('users',UserController::class);
     Route::resource('genders', GenderController::class);
     Route::resource('document_types', DocumentTypeController::class);
@@ -42,9 +45,12 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function(){
     Route::resource('campus', CampusController::class);
     Route::resource('general_objective', GeneralObjectiveController::class);
     Route::resource('specific_objective', SpecificObjectiveController::class);
+    Route::get('list-contract', [ContractController::class,'listContracts']);
     Route::resource('contracts', ContractController::class);
     Route::resource('inability', InabilityController::class);
     Route::resource('news', NewsController::class);
+    Route::resource('status_certificate', StatusCertificateController::class);
+
 });
 
 //Ruta para el PDf

@@ -11,6 +11,7 @@ use App\Http\Controllers\GeneralObjectiveController;
 use App\Http\Controllers\SpecificObjectiveController;
 use App\Http\Controllers\ContractController;
 use App\Http\Controllers\NewsController;
+use App\Http\Controllers\StatusCertificateController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -33,6 +34,8 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function(){
     Route::get('/', function () {
         return view('welcome');
     });
+    Route::get('users/edit-profile', [UserController::class, 'edit_profile']);
+    Route::put('users/update-profile', [UserController::class, 'update_profile']);
     Route::resource('users',UserController::class);
     Route::resource('genders', GenderController::class);
     Route::resource('document_types', DocumentTypeController::class);
@@ -43,6 +46,8 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function(){
     Route::get('list-contract', [ContractController::class,'listContracts']);
     Route::resource('contracts', ContractController::class);
     Route::resource('news', NewsController::class);
+    Route::resource('status_certificate', StatusCertificateController::class);
+
 });
 
 

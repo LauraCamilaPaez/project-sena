@@ -3,29 +3,13 @@
     <div class="row">
         <div class="col-sm-12">
             <div class="page-title-box">
-                <h1>Contratos</h1>
+                <h1>Mis contratos</h1>
                 <p>Bienvenido aquí podrá encontrar todos sus contratos activos e inactivos</p>
                 @role('Administrador')
                 <a class="btn btn-primary btn-sm" href="{{ route('users.create') }}">Crear Usuario</a>
                 @endrole
                 <section>
                     <div class="card-body">
-                        <form action="" method="GET">
-                            <div class="row">
-                                <div class="col-md-3">
-                                    <input type="search" name="q" class="form-control" value="{{ @$_GET['q'] }}" placeholder="Buscar...">
-                                    <br>
-                                </div>
-                                <div class="col-md-3">
-                                    <button class="btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-                                        </svg></button>
-
-                                        <a href="{{ route('users.index') }}">Eliminar filtro</a>
-                                </div>
-                            </div>
-                        </form>
-
                         <div class="table-responsive">
                             <table class="table  table-bordered table-striped table-hover" id="makeEditable">
                                 <thead>
@@ -36,6 +20,7 @@
                                     <th>Fecha Fin </th>
                                     <th>Valor del contrato</th>
                                     <th>Pdf</th>
+                                    <th>Certificado</th>
                                     @role('Administrador')
                                     <th name="buttons">Acciones</th>
                                     @endrole
@@ -50,6 +35,14 @@
                                         <td>{{ $contract->date_end }}</td>
                                         <td>{{ $contract->value }}</td>
                                         <td>{{ $contract->pdf}}</td>
+                                        <td>
+                                            <form action="{{ route('status_contract.store') }}" method="post">
+                                                @csrf
+                                                <input type="hidden" name="user_id" value="{{ $contract->users->id }}">
+                                                <input type="hidden" name="contract_id" value="{{ $contract->id }}">
+                                                <button class="btn btn-sm btn-outline-gray" type="submit">Solicitar</button>
+                                            </form>
+                                        </td>
                                         @role('Administrador')
                                         <td name="buttons">
                                             <div class=" pull-right">

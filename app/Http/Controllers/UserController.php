@@ -31,7 +31,7 @@ class UserController extends Controller
     {
         $document_types = DocumentType::all();
         $genders = Gender::all();
-        return view('pages.admin.user.create',compact('genders', 'document_types'));
+        return view('pages.admin.user.create', compact('genders', 'document_types'));
     }
 
     /**
@@ -70,7 +70,7 @@ class UserController extends Controller
         $user = User::find($id);
         $document_types = DocumentType::all();
         $genders = Gender::all();
-        return view('pages.admin.user.edit',compact('user','genders','document_types'));
+        return view('pages.admin.user.edit', compact('user', 'genders', 'document_types'));
     }
 
     /**
@@ -102,5 +102,18 @@ class UserController extends Controller
             'status' => 'Se ha eliminado el Usuario correctamente.',
             'type' => 'danger',
         ]);
+    }
+
+    public function edit_profile()
+    {
+        $document_types = DocumentType::all();
+        $genders = Gender::all();
+        return view('profile', compact( 'genders', 'document_types'));
+    }
+
+    public function update_profile(Request $request)
+    {
+        $update_profile = User::find(auth()->user()->id)->update($request->all());
+        return back();
     }
 }

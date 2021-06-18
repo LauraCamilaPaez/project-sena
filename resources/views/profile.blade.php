@@ -83,80 +83,63 @@
     <div class="col-lg-12 col-xl-9 mx-auto mt-5">
         <div class="card">
             <div class="card-body">
-                <form method="post" class="card-box">
-                    <div class="dropify-wrapper has-preview">
-                        <div class="dropify-message"><span class="file-icon"></span>
-                            <p>Drag and drop a file here or click</p>
-                            <p class="dropify-error">Ooops, something wrong appended.</p></div>
-                        <div class="dropify-loader" style="display: none;"></div>
-                        <div class="dropify-errors-container">
-                            <ul></ul>
-                        </div>
-                        <input type="file" id="input-file-now-custom-1" class="dropify btn btn-info"
-                               data-default-file="../assets/images/users/user-4.jpg">
-                        <button type="button" class="btn btn-danger ml-2">Cancelar</button>
-                        <div class="dropify-preview" style="display: block;"><span class="dropify-render"><img
-                                    src="../assets/images/users/user-4.jpg"></span>
-                            <div class="dropify-infos">
-                                <div class="dropify-infos-inner"><p class="dropify-filename"><span
-                                            class="file-icon"></span> <span
-                                            class="dropify-filename-inner">user-4.jpg</span></p>
-                                    <p class="dropify-infos-message">Drag and drop or click to replace</p></div>
-                            </div>
-                        </div>
-                    </div>
-                    <span class="input-icon icon-right">
-                                                            <textarea rows="4" class="form-control"
-                                                                      placeholder="Post a new message"></textarea>
-                                                        </span>
-                    <div class="float-right my-3">
-                        <a class="btn btn-sm btn-gradient-primary text-white px-4 mb-0">Send</a>
-                    </div>
-                    <ul class="list-inline mt-1">
-                        <li class="list-inline-item">
-                            <a href="#"><i class=" fas fa-video font-18 mr-2 mt-2 text-primary"></i></a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a href="#"><i class="fas fa-camera  font-18 mt-2 text-primary"></i></a>
-                        </li>
-                    </ul>
-                </form>
-
                 <div class="">
-                    <form class="form-horizontal form-material mb-0">
+                    <form action="{{ url('users/update-profile') }}" class="form-horizontal form-material mb-0"
+                          method="post">
+                        @csrf
+                        @method('PUT')
                         <div class="form-group">
-                            <input type="text" placeholder="Full Name" class="form-control">
+                            <input type="text" placeholder="Nombres" name="names" id="names" class="form-control"
+                                   value="{{ auth()->user()->names }}">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Apellidos" name="lastnames" id="lastnames"
+                                   class="form-control" value="{{ auth()->user()->lastnames }}">
                         </div>
 
-                        <div class="form-group row">
-                            <div class="col-md-4">
-                                <input type="email" placeholder="Email" class="form-control" name="example-email"
-                                       id="example-email">
-                            </div>
-                            <div class="col-md-4">
-                                <input type="password" placeholder="password" class="form-control">
-                            </div>
-                            <div class="col-md-4">
-                                <input type="password" placeholder="Re-password" class="form-control">
-                            </div>
-                        </div>
                         <div class="form-group row">
                             <div class="col-md-6">
-                                <input type="text" placeholder="Phone No" class="form-control">
+                                <input type="email" placeholder="Correo Electrónico" class="form-control" id="email"
+                                       name="email" value="{{ auth()->user()->email }}">
                             </div>
                             <div class="col-md-6">
                                 <select class="form-control">
-                                    <option>London</option>
-                                    <option>India</option>
-                                    <option>Usa</option>
-                                    <option>Canada</option>
-                                    <option>Thailand</option>
+                                    <option style="display: none">Seleccionar...</option>
+                                    @foreach($genders as $gender)
+                                        <option {{ $gender->id ==  auth()->user()->gender ? 'selected'  : '' }} value="{{ $gender->gender }}">{{ $gender->gender }}</option>
+                                    @endforeach
                                 </select>
                             </div>
                         </div>
+                        <div class="form-group row">
+                            <div class="col-md-6">
+                                <select class="form-control">
+                                    <option style="display: none">Seleccionar...</option>
+                                    @foreach($document_types as $document_type)
+                                        <option {{ $document_type->id == auth()->user()->document_type ? 'selected' : '' }} value="{{ $document_type->document_type }}">{{ $document_type->document_type }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="text" placeholder="Número de documento" class="form-control"
+                                       name="document"
+                                       id="document" value="{{ auth()->user()->document }}">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-6">
+                                <input type="text" placeholder="Número de móvil" class="form-control"
+                                       name="mobile"
+                                       id="mobile" value="{{ auth()->user()->mobile }}">
+                            </div>
+                            <div class="col-md-6">
+                                <input type="text" placeholder="Número de teléfono" class="form-control"
+                                       name="phone"
+                                       id="phone" value="{{ auth()->user()->phone }}">
+                            </div>
+                        </div>
                         <div class="form-group">
-                            <textarea rows="5" placeholder="Message" class="form-control"></textarea>
-                            <button class="btn btn-gradient-primary btn-sm px-4 mt-3 float-right mb-0">Update Profile
+                            <button type="submit" class="btn btn-gradient-primary btn-sm px-4 mt-3 float-right mb-0">Guardar Perfil
                             </button>
                         </div>
                     </form>

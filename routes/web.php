@@ -34,8 +34,8 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function(){
     Route::get('/', function () {
         return view('welcome');
     });
-    Route::get('users/edit-profile', [UserController::class, 'edit_profile']);
-    Route::put('users/update-profile', [UserController::class, 'update_profile']);
+    Route::get('edit-profile', [UserController::class, 'edit_profile']);
+    Route::put('update-profile', [UserController::class, 'update_profile']);
     Route::resource('users',UserController::class);
     Route::resource('genders', GenderController::class);
     Route::resource('document_types', DocumentTypeController::class);

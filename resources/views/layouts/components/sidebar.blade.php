@@ -75,7 +75,7 @@
                     <li class="nav-item "><a class="nav-link" href="{{ url('genders') }}">Géneros</a></li>
                     <li class="nav-item "><a class="nav-link" href="{{ url('document_types') }}">Tipos de Documento</a></li>
                     @endrole
-                    <li class="nav-item "><a class="nav-link" href="{{ url('profile') }}">Perfil</a></li>
+                    <li class="nav-item "><a class="nav-link" href="{{ url('edit-profile') }}">Perfil</a></li>
                 </ul>
             </div><!-- end Revisión -->
 

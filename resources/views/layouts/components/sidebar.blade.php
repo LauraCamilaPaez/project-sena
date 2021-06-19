@@ -66,20 +66,18 @@
                     <h6 class="menu-title">Revisión</h6>
                 </div>
                 <ul class="nav ">
-                    <li class="nav-item "><a class="nav-link" href="/">Inicio</a></li>
-                    <li class="nav-item "><a class="nav-link" href="profile">Perfil</a></li>
                     @role('Administrador|Supervisor|Secretario')
                     <li class="nav-item "><a class="nav-link" href="{{ url('users') }}">Usuarios</a></li>
                     @endrole
                     <li class="nav-item "><a class="nav-link" href="{{ url('training_center') }}">Centros de Formación</a></li>
                     <li class="nav-item "><a class="nav-link" href="{{ url('campus') }}">Instalación</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ route('contact') }}">Contáctenos</a></li>
                     @role('Administrador|Supervisor')
                     <li class="nav-item "><a class="nav-link" href="{{ url('genders') }}">Géneros</a></li>
                     <li class="nav-item "><a class="nav-link" href="{{ url('document_types') }}">Tipos de Documento</a></li>
+                    <li class="nav-item "><a class="nav-link" href="{{ url('inability') }}">Incapacidades</a></li>
                     @endrole
                     <li class="nav-item "><a class="nav-link" href="{{ url('profile') }}">Perfil</a></li>
-                    <li class="nav-item "><a class="nav-link" href="{{ url('inability') }}">Incapacidades</a></li>
-                    <li class="nav-item "><a class="nav-link" href="/analytics/analytics-reports">Certificados</a></li>
                 </ul>
             </div><!-- end Revisión -->
 
@@ -96,6 +94,7 @@
                             <li><a href="/apps/email-read">Editar datos personales</a></li>
                             <li><a href="/apps/email-read">Editar contraseña</a></li>
                         </ul>
+                        <li class="nav-item "><a class="nav-link" href="{{ url('inability') }}">Incapacidades</a></li>
                     </li><!--end nav-item-->
                 </ul>
             </div><!-- end Perfil -->
@@ -107,14 +106,12 @@
                 <ul class="nav">
                     <li class="nav-item"><a class="nav-link" href="/pages/pages-tour">Ver</a></li>
                     @role('Administrador')
-                    {{--  <li class="nav-item"><a class="nav-link" href="/pages/pages-profile">Crear</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/pages/pages-profile">Crear</a></li>
                     <li class="nav-item"><a class="nav-link" href="/pages/pages-timeline">Editar</a></li>
                     @role('Secretario|Administrador')
-                    <li class="nav-item"><a class="nav-link" href="/pages/pages-treeview">Eliminar</a></li>  --}}
-                    {{--  @endrole  --}}
+                    <li class="nav-item"><a class="nav-link" href="/pages/pages-treeview">Eliminar</a></li>
                     @endrole
-
-
+                    @endrole
                 </ul>
             </div><!-- end Incapacidades -->
 
@@ -123,8 +120,6 @@
                     <h6 class="menu-title">Certificados</h6>
                 </div>
                 <ul class="nav">
-
-
                     <li class="nav-item"><a class="nav-link" href="/pages/pages-tour">Ver</a></li>
                     @role('Administrador')
                     <li class="nav-item"><a class="nav-link" href="/pages/pages-profile">Crear</a></li>
@@ -133,9 +128,9 @@
                     <li class="nav-item"><a class="nav-link" href="/pages/pages-treeview">Eliminar</a></li>
                     @endrole
                     @endrole
-
                 </ul>
             </div><!-- end Pages -->
+
             <div id="MetricaAuthentication" class="main-icon-menu-pane">
                 <div class="title-box">
                     <h6 class="menu-title">Noticias y Contacto</h6>
@@ -146,15 +141,12 @@
                                 class="menu-arrow"><i class="mdi mdi-chevron-right"></i></span></a>
                         <ul class="nav-second-level" aria-expanded="false">
                             <li><a href="{{ url('news') }}">Noticias</a></li>
+                            {{--  <li class="nav-item"><a class="nav-link" href="{{ route('contact') }}">Contáctenos</a></li>   --}}
                         </ul>
                     </li><!--end nav-item-->
                 </ul>
                 <ul class="nav">
-                    <li class="nav-item"><a class="nav-link" href="/">Inicio</a></li>
-                    {{--  <li class="nav-item"><a class="nav-link" href="{{ url('news') }}">SENALAB</a></li>  --}}
-                    <li class="nav-item"><a class="nav-link" href="http://oferta.senasofiaplus.edu.co/sofia-oferta/" target="black">SENA</a></li>
-                    <li class="nav-item"><a class="nav-link" href="https://electricidadelectronicaytelecomu.blogspot.com/" target="black">CEET</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{{ route('contact') }}">Contáctenos</a></li>
+                    {{--  <li class="nav-item"><a class="nav-link" href="{{ route('contact') }}">Contáctenos</a></li>  --}}
                 </ul>
             </div><!-- end News-->
         </div><!--end menu-body-->

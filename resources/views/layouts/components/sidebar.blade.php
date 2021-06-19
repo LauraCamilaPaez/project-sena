@@ -71,11 +71,9 @@
                     @endrole
                     <li class="nav-item "><a class="nav-link" href="{{ url('training_center') }}">Centros de Formación</a></li>
                     <li class="nav-item "><a class="nav-link" href="{{ url('campus') }}">Instalación</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{{ route('contact') }}">Contáctenos</a></li>
                     @role('Administrador|Supervisor')
                     <li class="nav-item "><a class="nav-link" href="{{ url('genders') }}">Géneros</a></li>
                     <li class="nav-item "><a class="nav-link" href="{{ url('document_types') }}">Tipos de Documento</a></li>
-                    <li class="nav-item "><a class="nav-link" href="{{ url('inability') }}">Incapacidades</a></li>
                     @endrole
                     <li class="nav-item "><a class="nav-link" href="{{ url('profile') }}">Perfil</a></li>
                 </ul>
@@ -94,7 +92,6 @@
                             <li><a href="/apps/email-read">Editar datos personales</a></li>
                             <li><a href="/apps/email-read">Editar contraseña</a></li>
                         </ul>
-                        <li class="nav-item "><a class="nav-link" href="{{ url('inability') }}">Incapacidades</a></li>
                     </li><!--end nav-item-->
                 </ul>
             </div><!-- end Perfil -->
@@ -112,6 +109,8 @@
                     <li class="nav-item"><a class="nav-link" href="/pages/pages-treeview">Eliminar</a></li>
                     @endrole
                     @endrole
+
+
                 </ul>
             </div><!-- end Incapacidades -->
 
@@ -120,6 +119,8 @@
                     <h6 class="menu-title">Certificados</h6>
                 </div>
                 <ul class="nav">
+
+
                     <li class="nav-item"><a class="nav-link" href="/pages/pages-tour">Ver</a></li>
                     @role('Administrador')
                     <li class="nav-item"><a class="nav-link" href="/pages/pages-profile">Crear</a></li>
@@ -128,9 +129,9 @@
                     <li class="nav-item"><a class="nav-link" href="/pages/pages-treeview">Eliminar</a></li>
                     @endrole
                     @endrole
+
                 </ul>
             </div><!-- end Pages -->
-
             <div id="MetricaAuthentication" class="main-icon-menu-pane">
                 <div class="title-box">
                     <h6 class="menu-title">Noticias y Contacto</h6>
@@ -141,12 +142,11 @@
                                 class="menu-arrow"><i class="mdi mdi-chevron-right"></i></span></a>
                         <ul class="nav-second-level" aria-expanded="false">
                             <li><a href="{{ url('news') }}">Noticias</a></li>
-                            {{--  <li class="nav-item"><a class="nav-link" href="{{ route('contact') }}">Contáctenos</a></li>   --}}
                         </ul>
                     </li><!--end nav-item-->
                 </ul>
                 <ul class="nav">
-                    {{--  <li class="nav-item"><a class="nav-link" href="{{ route('contact') }}">Contáctenos</a></li>  --}}
+                    <li class="nav-item"><a class="nav-link" href="{{ route('contact') }}">Contáctenos</a></li>
                 </ul>
             </div><!-- end News-->
         </div><!--end menu-body-->

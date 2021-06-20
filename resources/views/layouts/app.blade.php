@@ -45,8 +45,7 @@
                                 </div>
                             @endif
 
-                           @yield('content1')  
-
+                            @yield('content')
                         </div>
                     </div>
                 </div>

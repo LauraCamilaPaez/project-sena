@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('content1')
+@section('content')
 
     <h1>Contratos</h1>
     <p>Aquí podrás encontrar todos contratos que hay en el sistema</p>

@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('content1')
+@section('content')
 
 <h1>Nueva Instalación</h1>
 <p>Crea una nueva instalación en el sistema.</p>

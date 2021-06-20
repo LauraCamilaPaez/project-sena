@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('content1')
+@section('content')
 
     <h1>Editar Objetivo General</h1>
     <div class="container mt-3">

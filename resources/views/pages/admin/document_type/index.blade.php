@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('content1')
+@section('content')
 
     <h1>Tipos de Documento</h1>
     <p>Aquí podrás encontrar todos los tipos de documento del sistema.</p>

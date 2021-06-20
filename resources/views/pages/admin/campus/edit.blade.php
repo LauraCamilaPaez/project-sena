@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('content1')
+@section('content')
 
     <h1>Editar Instalación</h1>
     <p>Edita la instalación</p>

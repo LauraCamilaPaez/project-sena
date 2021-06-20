@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('content1')
+@section('content')
 
     <h1>Editar Centro de Formación</h1>
     <p>Edita el centro de Formación en el sistema.</p>

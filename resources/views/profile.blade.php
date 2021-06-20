@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 
-@section('content1')
+@section('content')
 
     <h1>Perfil</h1>
     <p>Aquí podrás revisar tu perfil.</p>

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Contract;
 use App\Models\StatusCertificate;
 use Illuminate\Http\Request;
 
@@ -16,7 +17,7 @@ class StatusCertificateController extends Controller
 
     public function index()
     {
-        $status_certificates = StatusCertificate::all();
+        $status_certificates = Contract::all();
         return view('pages.users.contract.index', compact('status_certificates'));
     }
 }

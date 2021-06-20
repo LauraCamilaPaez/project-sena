@@ -3,6 +3,7 @@
     <div class="row">
         <div class="col-sm-12">
             <div class="page-title-box">
+
                 <h1>Mis contratos</h1>
                 <p>Bienvenido aquí podrá encontrar todos sus contratos activos e inactivos</p>
                 @role('Administrador')
@@ -36,12 +37,29 @@
                                         <td>{{ $contract->value }}</td>
                                         <td>{{ $contract->pdf}}</td>
                                         <td>
-                                            <form action="{{ route('status_contract.store') }}" method="post">
-                                                @csrf
-                                                <input type="hidden" name="user_id" value="{{ $contract->users->id }}">
-                                                <input type="hidden" name="contract_id" value="{{ $contract->id }}">
-                                                <button class="btn btn-sm btn-outline-gray" type="submit">Solicitar</button>
-                                            </form>
+                                            @php
+                                                @$status_certificate = \App\Models\StatusCertificate::where('user_id',$contract->users->id)->where('contract_id',$contract->id)->first()
+                                            @endphp
+
+                                            @if(@$status_certificate->status == "Solicitado")
+                                                  <span class="badge badge-info">Solicitado</span>
+                                            @elseif(@$status_certificate->status == "Entregado")
+                                                <span class="badge badge-info">Descargar</span>
+
+                                            @elseif(@$status_certificate->status == "Error")
+                                                <span class="badge badge-danger">Paila bro</span>
+                                                @else
+                                                <form action="{{ route('status_certificate.store') }}" method="post">
+                                                    @csrf
+                                                    <input type="hidden" name="user_id" value="{{ $contract->users->id }}">
+                                                    <input type="hidden" name="contract_id" value="{{ $contract->id }}">
+                                                    <button class="btn btn-sm btn-outline-gray" type="submit">Solicitar</button>
+                                                </form>
+                                            @endif
+
+
+
+
                                         </td>
                                         @role('Administrador')
                                         <td name="buttons">

@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('content')
+@section('content1')
 
     <h1>Noticias</h1>
     <p>Bienvenido, aquí podrás encontrar todas las noticias de SENALAB</p>

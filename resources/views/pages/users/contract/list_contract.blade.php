@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('content')
+@section('content1')
     <div class="row">
         <div class="col-sm-12">
             <div class="page-title-box">

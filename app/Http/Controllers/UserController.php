@@ -32,6 +32,7 @@ class UserController extends Controller
         $document_types = DocumentType::all();
         $genders = Gender::all();
         return view('pages.admin.user.create', compact('genders', 'document_types'));
+        
     }
 
     /**
@@ -42,10 +43,13 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        $request['password'] = bcrypt($request->document);
-        $user = User::create($request->all());
-        return redirect()->route('users.index')
-            ->with('status', 'Se ha creado el Usuario correctamente');
+            $request['password'] = bcrypt($request->document);
+            $user = User::create($request->all());
+            return redirect()->route('users.index')->
+            with([
+                'status' => 'Se ha Creado el Usuario correctamente.',
+                'type' => 'warning',
+            ]);
     }
 
     /**

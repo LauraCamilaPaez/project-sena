@@ -66,18 +66,21 @@
                     <h6 class="menu-title">Revisión</h6>
                 </div>
                 <ul class="nav ">
+
                     @role('Administrador|Supervisor|Secretario')
                     <li class="nav-item "><a class="nav-link" href="{{ url('users') }}">Usuarios</a></li>
                     @endrole
+
                     <li class="nav-item "><a class="nav-link" href="{{ url('training_center') }}">Centros de Formación</a></li>
                     <li class="nav-item "><a class="nav-link" href="{{ url('campus') }}">Instalación</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{ route('contact') }}">Contáctenos</a></li>
+                    <li class="nav-item "><a class="nav-link" href="{{ url('profile') }}">Perfil</a></li>
+                    
                     @role('Administrador|Supervisor')
                     <li class="nav-item "><a class="nav-link" href="{{ url('genders') }}">Géneros</a></li>
                     <li class="nav-item "><a class="nav-link" href="{{ url('document_types') }}">Tipos de Documento</a></li>
-                    <li class="nav-item "><a class="nav-link" href="{{ url('inability') }}">Incapacidades</a></li>
                     @endrole
-                    <li class="nav-item "><a class="nav-link" href="{{ url('profile') }}">Perfil</a></li>
+                    
                 </ul>
             </div><!-- end Revisión -->
 
@@ -94,7 +97,7 @@
                             <li><a href="/apps/email-read">Editar datos personales</a></li>
                             <li><a href="/apps/email-read">Editar contraseña</a></li>
                         </ul>
-                        <li class="nav-item "><a class="nav-link" href="{{ url('inability') }}">Incapacidades</a></li>
+                        {{--  <li class="nav-item "><a class="nav-link" href="{{ url('inability') }}">Incapacidades</a></li>  --}}
                     </li><!--end nav-item-->
                 </ul>
             </div><!-- end Perfil -->
@@ -110,6 +113,8 @@
                     <li class="nav-item"><a class="nav-link" href="/pages/pages-timeline">Editar</a></li>
                     @role('Secretario|Administrador')
                     <li class="nav-item"><a class="nav-link" href="/pages/pages-treeview">Eliminar</a></li>
+                    <li class="nav-item "><a class="nav-link" href="{{ url('inability') }}">Incapacidades</a></li>
+                    <li class="nav-item "><a class="nav-link" href="{{ url('incapacidad') }}">Enviar Incapacidad</a></li>
                     @endrole
                     @endrole
                 </ul>

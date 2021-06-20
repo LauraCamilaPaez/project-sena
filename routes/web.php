@@ -12,7 +12,7 @@ use App\Http\Controllers\SpecificObjectiveController;
 use App\Http\Controllers\ContractController;
 use App\Http\Controllers\InabilityController;
 use App\Http\Controllers\NewsController;
-use App\Http\Controllers\PDFController;
+// use App\Http\Controllers\PDFController;
 use App\Http\Controllers\StatusCertificateController;
 /*
 |--------------------------------------------------------------------------
@@ -54,14 +54,14 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function(){
 });
 
 //Ruta para el PDf
-Route::get('generate-pdf', [PDFController::class, 'generatePDF']);
+// Route::get('generate-pdf', [PDFController::class, 'generatePDF']);
 
 Route::get('profile',function(){
   return view('profile');
 });
 
-Route::get('inability',function(){
-  return view('inability');
+Route::get('incapacidad',function(){
+  return view('incapacidad');
 });
 
 Route::get('contacto', function () {
@@ -74,28 +74,13 @@ Route::get('Error404', function () {
 
 Route::resource('users',UserController::class);
 
-Route::resource('genders', GenderController::class);
+// Route::resource('genders', GenderController::class);
 
 Route::resource('document_types', DocumentTypeController::class);
 
-// Route::resource('inability',InabilityController::class);
+//Route::resource('inability',InabilityController::class);
 
-//Contáctanos
-// Route::get('/', function () {
-//   return view('home');
-// })->name('home');
 
-// Route::get('service', function () {
-//   return view('service');
-// })->name('service');
-
-// Route::get('nosotros', function () {
-//   return view('nosotros');
-// })->name('nosotros');
-
-// Route::get('inisesion', function () {
-//   return view('inisesion');
-// })->name('inisesion');
 
 Route::post('messages', function(){
   //enviar correo

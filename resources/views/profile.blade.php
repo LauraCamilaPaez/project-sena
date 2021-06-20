@@ -92,9 +92,8 @@
                             <div class="col-md-6">
                                 <select class="form-control">
                                     <option style="display: none">Seleccionar...</option>
-                                    @foreach($genders as $gender)
-                                        <option
-                                            {{ $gender->id ==  auth()->user()->gender ? 'selected'  : '' }} value="{{ $gender->gender }}">{{ $gender->gender }}</option>
+                                     @foreach($genders as $gender)
+                                        <option {{ $gender->id ==  auth()->user()->gender ? 'selected'  : '' }} value="{{ $gender->gender }}">{{ $gender->gender }}</option>
                                     @endforeach
                                 </select>
                             </div>
@@ -103,9 +102,8 @@
                             <div class="col-md-6">
                                 <select class="form-control">
                                     <option style="display: none">Seleccionar...</option>
-                                    @foreach($document_types as $document_type)
-                                        <option
-                                            {{ $document_type->id == auth()->user()->document_type ? 'selected' : '' }} value="{{ $document_type->document_type }}">{{ $document_type->document_type }}</option>
+                                  @foreach($document_types as $document_type)
+                                        <option {{ $document_type->id == auth()->user()->document_type ? 'selected' : '' }} value="{{ $document_type->document_type }}">{{ $document_type->document_type }}</option>
                                     @endforeach
                                 </select>
                             </div>

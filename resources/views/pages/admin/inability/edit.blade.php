@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
 
-    <h1>Actualizar Usuario</h1>
+    <h1>Actualizar Incapacidad</h1>
     <div class="container mt-3">
         <form action="{{ route('inability.update',$inability->id) }}" method="post">
             @csrf
@@ -69,7 +69,7 @@
                 </div>
             </div>
             <hr>
-            <button class="btn btn-primary">Actualizar Usuario</button>
+            <button class="btn btn-primary">Actualizar Incapacidad</button>
             <a href="{{ url('inability') }}" class="btn btn-danger">Cancelar</a>
         </form>
     </div>

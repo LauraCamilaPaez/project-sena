@@ -11,7 +11,7 @@
                 <div class="col-lg-4 align-self-center mb-3 mb-lg-0">
                     <div class="met-profile-main">
                         <div class="met-profile-main-pic">
-                            <img src="http://metrica.laravel.themesbrand.com/assets/images/users/user-7.jpg" alt=""
+                            <img src="{{ auth()->user()->profile_picture }}" alt=""
                                  class="rounded-circle">
                         </div>
 
@@ -71,7 +71,7 @@
         <div class="card">
             <div class="card-body">
                 <div class="">
-                    <form action="{{ url('users/update-profile') }}" class="form-horizontal form-material mb-0"
+                    <form action="{{ url('update-profile') }}" class="form-horizontal form-material mb-0"
                           method="post">
                         @csrf
                         @method('PUT')
@@ -93,7 +93,7 @@
                                 <select class="form-control">
                                     <option style="display: none">Seleccionar...</option>
                                      @foreach($genders as $gender)
-                                        <option {{ $gender->id ==  auth()->user()->gender ? 'selected'  : '' }} value="{{ $gender->gender }}">{{ $gender->gender }}</option>
+                                        <option {{ $gender->id ==  auth()->user()->gender_id ? 'selected'  : '' }} value="{{ $gender->gender }}">{{ $gender->gender }}</option>
                                     @endforeach
                                 </select>
                             </div>
@@ -103,7 +103,7 @@
                                 <select class="form-control">
                                     <option style="display: none">Seleccionar...</option>
                                   @foreach($document_types as $document_type)
-                                        <option {{ $document_type->id == auth()->user()->document_type ? 'selected' : '' }} value="{{ $document_type->document_type }}">{{ $document_type->document_type }}</option>
+                                        <option {{ $document_type->id == auth()->user()->document_type_id ? 'selected' : '' }} value="{{ $document_type->document_type }}">{{ $document_type->document_type }}</option>
                                     @endforeach
                                 </select>
                             </div>

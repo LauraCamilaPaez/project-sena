@@ -41,7 +41,7 @@
                 <i data-feather="github" class="align-self-center menu-icon icon-md icon-dual mb-4"></i>
             </a>
             <a href="" class="profile">
-                <img src="{{ url('img/profile-picture.png') }}" alt="profile-user"
+                <img src="{{ auth()->user()->profile_picture }}" alt="profile-user"
                      class="rounded-circle thumb-sm">
             </a>
         </div>
@@ -73,9 +73,9 @@
 
                     <li class="nav-item "><a class="nav-link" href="{{ url('training_center') }}">Centros de Formación</a></li>
                     <li class="nav-item "><a class="nav-link" href="{{ url('campus') }}">Instalación</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{{ route('contact') }}">Contáctenos</a></li>                    
+                    <li class="nav-item"><a class="nav-link" href="{{ route('contact') }}">Contáctenos</a></li>
                     <li class="nav-item "><a class="nav-link" href="{{ url('edit-profile') }}">Perfil</a></li>
-                    
+
                     @role('Administrador|Supervisor')
                     <li class="nav-item "><a class="nav-link" href="{{ url('genders') }}">Géneros</a></li>
                     <li class="nav-item "><a class="nav-link" href="{{ url('document_types') }}">Tipos de Documento</a></li>

@@ -107,7 +107,7 @@
                 <a class="nav-link dropdown-toggle waves-effect waves-light nav-user" data-toggle="dropdown" href="#"
                    role="button"
                    aria-haspopup="false" aria-expanded="false">
-                    <img src="{{ url('img/profile-picture.png') }}" alt="profile-user"
+                    <img src="{{ auth()->user()->profile_picture }}" alt="profile-user"
                          class="rounded-circle"/>
                     <span class="ml-1 nav-user-name hidden-sm"> {{ @Auth::user()->names }} <i class="mdi mdi-chevron-down"></i> </span>
                 </a>

@@ -26,7 +26,6 @@ class UserTableSeeder extends Seeder
             'mobile' => 34567890,
             'status' => 1,
             'profile_picture' => 'Hola',
-            'role_id' => 1,
         ]);
         $user->assignRole('Administrador');
 
@@ -43,7 +42,6 @@ class UserTableSeeder extends Seeder
             'mobile' => 34567890,
             'status' => 1,
             'profile_picture' => 'Hola',
-            'role_id' => 2,
         ]);
         $user->assignRole('Contratista');
 
@@ -60,7 +58,6 @@ class UserTableSeeder extends Seeder
             'mobile' => 34567890,
             'status' => 1,
             'profile_picture' => 'Hola',
-            'role_id' => 3,
         ]);
         $user->assignRole('Supervisor');
 
@@ -77,7 +74,6 @@ class UserTableSeeder extends Seeder
             'mobile' => 34567890,
             'status' => 1,
             'profile_picture' => 'Hola',
-            'role_id' => 4,
 
         ]);
         $user->assignRole('Secretario');

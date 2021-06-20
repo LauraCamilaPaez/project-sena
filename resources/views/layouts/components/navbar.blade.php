@@ -26,7 +26,6 @@
                 </a>
             <li class="dropdown notification-list">
                 <div class="dropdown-menu dropdown-menu-right dropdown-lg pt-0">
-
                     <h6 class="dropdown-item-text font-15 m-0 py-3 bg-primary text-white d-flex justify-content-between align-items-center">
                         Notificaciones <span class="badge badge-light badge-pill">2</span>
                     </h6>

@@ -1,9 +1,12 @@
 @extends('layouts.app')
 @section('content')
 
+
     <h1>Géneros</h1>
     <p>Aquí podrás encontrar todos los géneros almacenados en el sistema.</p>
+        @role('Administrador')
     <a href="{{ route('genders.create') }}" class="btn btn-primary btn-sm" href="">Crear Nuevo</a>
+    @endrole
     <div class="card-body">
         <div class="table-sm table-responsive">
             <table class="table table-bordered table-striped table-hover">
@@ -11,7 +14,9 @@
                     <tr class="bg-beanred text-white">
                         <th>#</th>
                         <th>Género</th>
+                        @role('Administrador')
                         <th>Acciones</th>
+                        @endrole
                     </tr>
                 </thead>
                 <tbody>
@@ -19,6 +24,7 @@
                     <tr class="active">
                         <td>{{ $loop->iteration }}</td>
                         <td>{{ $gender->gender }}</td>
+                        @role('Administrador')
                         <td name="buttons">
                             <div class=" pull-right">
                                 <a  href="{{ route('genders.edit', $gender->id) }}" id="bEdit" type="button"
@@ -34,7 +40,7 @@
                                 <form action="{{ route('genders.destroy', $gender->id) }}" method="POST" style="display: inline">
                                     @csrf
                                     @method('DELETE')
-                                    <a href="" id="bElim" type="submit"
+                                    <button id="bElim" type="submit"
                                             class="btn btn-sm btn-soft-danger btn-circle"
                                             onclick="rowElim(this);">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
@@ -45,7 +51,7 @@
                                             <path fill-rule="evenodd"
                                                   d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
                                         </svg>
-                                    </a>
+                                    </button>
                                 </form>
                                 <button id="bAcep" type="button"
                                         class="btn btn-sm btn-soft-purple mr-2 btn-circle"
@@ -57,6 +63,7 @@
                                         class="dripicons-cross" aria-hidden="true"></i></button>
                             </div>
                         </td>
+                        @endrole
                     </tr>
                 @endforeach
                 </tbody>

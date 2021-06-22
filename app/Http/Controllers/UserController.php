@@ -6,6 +6,7 @@ use App\Models\DocumentType;
 use App\Models\Gender;
 use Illuminate\Http\Request;
 use App\Models\User;
+use Spatie\Permission\Models\Role;
 
 class UserController extends Controller
 {
@@ -30,8 +31,10 @@ class UserController extends Controller
     public function create()
     {
         $document_types = DocumentType::all();
+        $roles = Role::all();
         $genders = Gender::all();
-        return view('pages.admin.user.create',compact('genders', 'document_types'));
+        return view('pages.admin.user.create', compact('genders', 'document_types', 'roles'));
+
     }
 
     /**
@@ -42,9 +45,14 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        $request['password'] = bcrypt($request->document);
-        $user = User::create($request->all());
-        return back();
+            $request['password'] = bcrypt($request->document);
+            $user = User::create($request->all());
+            $user->assignRole($request['role']);
+            return redirect()->route('users.index')->
+            with([
+                'status' => 'Se ha Creado el Usuario correctamente.',
+                'type' => 'warning',
+            ]);
     }
 
     /**
@@ -69,7 +77,8 @@ class UserController extends Controller
         $user = User::find($id);
         $document_types = DocumentType::all();
         $genders = Gender::all();
-        return view('pages.admin.user.edit',compact('user','genders','document_types'));
+        $roles = Role::all();
+        return view('pages.admin.user.edit', compact('user', 'genders', 'document_types', 'roles'));
     }
 
     /**
@@ -82,7 +91,10 @@ class UserController extends Controller
     public function update(Request $request, $id)
     {
         $user = User::find($id)->update($request->all());
-        return back();
+        return back()->with([
+            'status' => 'Se ha editado el Usuario correctamente.',
+            'type' => 'warning',
+        ]);
     }
 
     /**
@@ -94,6 +106,22 @@ class UserController extends Controller
     public function destroy($id)
     {
         $user = User::find($id)->delete();
+        return back()->with([
+            'status' => 'Se ha eliminado el Usuario correctamente.',
+            'type' => 'danger',
+        ]);
+    }
+
+    public function edit_profile()
+    {
+        $document_types = DocumentType::all();
+        $genders = Gender::all();
+        return view('profile', compact( 'genders', 'document_types'));
+    }
+
+    public function update_profile(Request $request)
+    {
+        $update_profile = User::find(auth()->user()->id)->update($request->all());
         return back();
     }
 }

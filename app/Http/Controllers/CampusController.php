@@ -21,7 +21,8 @@ class CampusController extends Controller
     public function store(Request $request)
     {
         $campus = Campus::create($request->all());
-        return back();
+        return redirect()->Route('campus.index')
+            ->with('status', 'Se ha creado la Instalación correctamente.');
     }
 
     public function show($id)
@@ -38,12 +39,18 @@ class CampusController extends Controller
     public function update(Request $request, $id)
     {
         $campus = Campus::find($id)->update($request->all());
-        return back();
+        return back()->with([
+            'status' => 'Se ha editado la Instalación correctamente.',
+            'type' => 'warning',
+        ]);
     }
 
     public function destroy($id)
     {
         $campus = Campus::find($id)->delete();
-        return back();
+        return back()->with([
+            'status' => 'Se ha eliminado la Instalación correctamente.',
+            'type' => 'danger',
+            ]);
     }
 }

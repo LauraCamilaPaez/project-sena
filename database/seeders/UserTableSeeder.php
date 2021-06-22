@@ -16,52 +16,65 @@ class UserTableSeeder extends Seeder
         $user = User::create([
             'names' => 'Administrador',
             'lastnames' => 'Administrador',
+            'profession' => 'Director SENA',
+            'gender_id' => 1,
             'email' => 'admin@gmail.com',
             'password' => bcrypt('12345a'),
-            'gender' => 1,
-            'document_type' => 1,
+            'document_type_id' => 1,
             'document' => 111111,
             'phone' => 567890,
             'mobile' => 34567890,
+            'status' => 1,
+            'profile_picture' => 'https://mannatthemes.com/metrica/metrica_simple/assets/images/users/user-4.jpg',
         ]);
         $user->assignRole('Administrador');
 
         $user = User::create([
             'names' => 'Contratista',
             'lastnames' => 'Contratista',
+            'profession' => 'Docente SENA',
+            'gender_id' => 2,
             'email' => 'contratista@gmail.com',
             'password' => bcrypt('12345c'),
-            'gender' => 1,
-            'document_type' => 1,
+            'document_type_id' => 1,
             'document' => 222222,
             'phone' => 567890,
             'mobile' => 34567890,
+            'status' => 1,
+            'profile_picture' => 'https://mannatthemes.com/metrica/metrica_simple/assets/images/users/user-3.jpg',
         ]);
         $user->assignRole('Contratista');
 
         $user = User::create([
             'names' => 'Supervisor',
+            'lastnames' => 'Supervisor',
+            'profession' => 'Estudiante SENA',
+            'gender_id' => 3,
             'email' => 'supervisor@gmail.com',
-            'lastnames' => 'supervisor@gmail.com',
             'password' => bcrypt('12345su'),
-            'gender' => 1,
-            'document_type' => 1,
+            'document_type_id' => 1,
             'document' => 333333,
             'phone' => 567890,
             'mobile' => 34567890,
+            'status' => 1,
+            'profile_picture' => 'https://mannatthemes.com/metrica/metrica_simple/assets/images/users/user-2.jpg',
         ]);
         $user->assignRole('Supervisor');
 
         $user = User::create([
             'names' => 'Secretario',
             'lastnames' => 'Secretario',
+            'profession' => 'Administrativo SENA',
+            'gender_id' => 1,
             'email' => 'secretario@gmail.com',
             'password' => bcrypt('12345se'),
-            'gender' => 1,
-            'document_type' => 1,
+            'document_type_id' => 1,
             'document' => 444444,
             'phone' => 567890,
             'mobile' => 34567890,
+            'status' => 1,
+            'profile_picture' => 'https://mannatthemes.com/metrica/metrica_simple/assets/images/users/user-1.jpg',
+
         ]);
         $user->assignRole('Secretario');
     }

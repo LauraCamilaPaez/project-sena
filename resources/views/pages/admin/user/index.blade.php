@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
     <div class="row">
-        {{-- <div class="col-sm-12">
+        <div class="col-sm-12">
 
             <div class="page-title-box">
                 <div class="float-right">
@@ -103,7 +103,7 @@
                         {{ $users->links() }}
 
                     </div>
-                </section> --}}
+                </section>
 
 
             </div><!--end page-title-box-->

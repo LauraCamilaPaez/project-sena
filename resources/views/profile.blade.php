@@ -11,7 +11,7 @@
                 <div class="col-lg-4 align-self-center mb-3 mb-lg-0">
                     <div class="met-profile-main">
                         <div class="met-profile-main-pic">
-                            <img src="http://metrica.laravel.themesbrand.com/assets/images/users/user-7.jpg" alt=""
+                            <img src="{{ auth()->user()->profile_picture }}" alt=""
                                  class="rounded-circle">
                         </div>
 
@@ -46,20 +46,20 @@
                                 <path fill-rule="evenodd"
                                       d="M6 3.5A1.5 1.5 0 0 1 7.5 2h1A1.5 1.5 0 0 1 10 3.5v1A1.5 1.5 0 0 1 8.5 6v1H11a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0V8h-5v.5a.5.5 0 0 1-1 0v-1A.5.5 0 0 1 5 7h2.5V6A1.5 1.5 0 0 1 6 4.5v-1zM8.5 5a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1zM3 11.5A1.5 1.5 0 0 1 4.5 10h1A1.5 1.5 0 0 1 7 11.5v1A1.5 1.5 0 0 1 5.5 14h-1A1.5 1.5 0 0 1 3 12.5v-1zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1zm4.5.5a1.5 1.5 0 0 1 1.5-1.5h1a1.5 1.5 0 0 1 1.5 1.5v1a1.5 1.5 0 0 1-1.5 1.5h-1A1.5 1.5 0 0 1 9 12.5v-1zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1z"/>
                             </svg>
-                            </i> <b>Profesión</b> : {{ auth()->user()->names }}
+                            </i> <b>Profesión</b> : {{ auth()->user()->profession }}
                         </li>
                     </ul>
                     <div class="button-list btn-social-icon">
                         <button type="button" class="btn btn-blue btn-circle">
-                            <i class="fab fa-facebook-f"></i>
+                            <a target="_blank" href="https://www.facebook.com/pages/Sena%20CEET/789699831197094/"><i class="fab fa-facebook-f text-white"></i></a>
                         </button>
 
                         <button type="button" class="btn btn-secondary btn-circle ml-2">
-                            <i class="fab fa-twitter"></i>
+                            <a target="_blank" href="https://twitter.com/soylidersena"><i class="fab fa-twitter text-white"></i></a>
                         </button>
 
                         <button type="button" class="btn btn-pink btn-circle  ml-2">
-                            <i class="fab fa-dribbble"></i>
+                            <a target="_blank" href="https://electricidadelectronicaytelecomu.blogspot.com/"><i class="fab fa-dribbble text-white"></i></a>
                         </button>
                     </div>
                 </div><!--end col-->
@@ -71,7 +71,7 @@
         <div class="card">
             <div class="card-body">
                 <div class="">
-                    <form action="{{ url('users/update-profile') }}" class="form-horizontal form-material mb-0"
+                    <form action="{{ url('update-profile') }}" class="form-horizontal form-material mb-0"
                           method="post">
                         @csrf
                         @method('PUT')
@@ -93,7 +93,7 @@
                                 <select class="form-control">
                                     <option style="display: none">Seleccionar...</option>
                                      @foreach($genders as $gender)
-                                        <option {{ $gender->id ==  auth()->user()->gender ? 'selected'  : '' }} value="{{ $gender->gender }}">{{ $gender->gender }}</option>
+                                        <option {{ $gender->id ==  auth()->user()->gender_id ? 'selected'  : '' }} value="{{ $gender->gender }}">{{ $gender->gender }}</option>
                                     @endforeach
                                 </select>
                             </div>
@@ -103,7 +103,7 @@
                                 <select class="form-control">
                                     <option style="display: none">Seleccionar...</option>
                                   @foreach($document_types as $document_type)
-                                        <option {{ $document_type->id == auth()->user()->document_type ? 'selected' : '' }} value="{{ $document_type->document_type }}">{{ $document_type->document_type }}</option>
+                                        <option {{ $document_type->id == auth()->user()->document_type_id ? 'selected' : '' }} value="{{ $document_type->document_type }}">{{ $document_type->document_type }}</option>
                                     @endforeach
                                 </select>
                             </div>

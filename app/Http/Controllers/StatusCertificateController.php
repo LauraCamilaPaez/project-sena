@@ -17,7 +17,7 @@ class StatusCertificateController extends Controller
 
     public function index()
     {
-        $status_certificates = Contract::all();
+        $status_certificates = StatusCertificate::all();
         return view('pages.users.contract.index', compact('status_certificates'));
     }
 }

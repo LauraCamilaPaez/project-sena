@@ -2,17 +2,8 @@
 @section('content')
     <div class="row">
         <div class="col-sm-12">
-            <div class="page-title-box">
-                <div class="float-right">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item">
-                            <a href="javascript:void(0);">Perfil</a></li>
-                        <li class="breadcrumb-item "><a href="javascript:void(0);">Incapacidades</a></li>
-                        <li class="breadcrumb-item active">Certificados</li>
-                    </ol>
-                </div>
                 <h1>Usuarios</h1>
-                <p>Buenvenido, aquí podrá gestionar todos los Usuarios registrados en SENALAB</p>
+                <p>Bienvenido, aquí podrá gestionar todos los Usuarios registrados en SENALAB</p>
                  @role('Administrador')
                 <a class="btn btn-primary btn-sm" href="{{ route('users.create') }}">Crear Usuario</a>
                   @endrole
@@ -108,10 +99,6 @@
 
                     </div>
                 </section>
-
-
-            </div><!--end page-title-box-->
-
         </div><!--end col-->
     </div>
 @endsection

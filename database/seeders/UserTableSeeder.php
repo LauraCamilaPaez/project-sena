@@ -25,7 +25,7 @@ class UserTableSeeder extends Seeder
             'phone' => 567890,
             'mobile' => 34567890,
             'status' => 1,
-            'profile_picture' => 'Hola',
+            'profile_picture' => 'https://mannatthemes.com/metrica/metrica_simple/assets/images/users/user-4.jpg',
         ]);
         $user->assignRole('Administrador');
 
@@ -41,7 +41,7 @@ class UserTableSeeder extends Seeder
             'phone' => 567890,
             'mobile' => 34567890,
             'status' => 1,
-            'profile_picture' => 'Hola',
+            'profile_picture' => 'https://mannatthemes.com/metrica/metrica_simple/assets/images/users/user-3.jpg',
         ]);
         $user->assignRole('Contratista');
 
@@ -57,7 +57,7 @@ class UserTableSeeder extends Seeder
             'phone' => 567890,
             'mobile' => 34567890,
             'status' => 1,
-            'profile_picture' => 'Hola',
+            'profile_picture' => 'https://mannatthemes.com/metrica/metrica_simple/assets/images/users/user-2.jpg',
         ]);
         $user->assignRole('Supervisor');
 
@@ -73,7 +73,7 @@ class UserTableSeeder extends Seeder
             'phone' => 567890,
             'mobile' => 34567890,
             'status' => 1,
-            'profile_picture' => 'Hola',
+            'profile_picture' => 'https://mannatthemes.com/metrica/metrica_simple/assets/images/users/user-1.jpg',
 
         ]);
         $user->assignRole('Secretario');

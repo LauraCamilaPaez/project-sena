@@ -3,7 +3,7 @@
 
     <h1>Nuevo Contrato</h1>
     <div class="container mt-3">
-        <form action="{{ url('contracts') }}" method="post">
+        <form action="{{ url('contracts') }}" method="post" enctype="multipart/form-data">
             @csrf
             <div class="row">
                 <div class="col-md-4">
@@ -39,7 +39,7 @@
                 <div class="col-md-4">
                     <div class="form-group">
                         <label for="phone">Pdf</label>
-                        <input type="text" class="form-control" name="pdf" id="pdf">
+                        <input type="file" class="form-control" name="pdf" id="pdf">
                     </div>
                 </div>
             </div>

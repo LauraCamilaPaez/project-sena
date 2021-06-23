@@ -22,16 +22,17 @@
                 @foreach($contracts as $contract)
                     <tr class="active">
                         <td>{{ $loop->iteration }}</td>
-                        <td>{{ $contract->names }}</td>
+                        <td>{{ $contract->users->names }}</td>
                         <td>{{ $contract->date_start }}</td>
                         <td>{{ $contract->date_end }}</td>
                         <td>{{ $contract->value}}</td>
-                        <td>{{ $contract->pdf}}</td>
+                        <td><a target="_blank"
+                               href="storage/{{ str_replace('public/','',$contract->pdf)}}">Descargar</a></td>
                         <td name="buttons">
                             <div class=" pull-right">
-                                <a  href="{{ route('contracts.edit', $contract->id) }}" id="bEdit" type="button"
-                                    class="btn btn-sm btn-soft-success btn-circle mr-2"
-                                    onclick="rowEdit(this);">
+                                <a href="{{ route('contracts.edit', $contract->id) }}" id="bEdit" type="button"
+                                   class="btn btn-sm btn-soft-success btn-circle mr-2"
+                                   onclick="rowEdit(this);">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                          fill="currentColor" class="bi bi-pencil"
                                          viewBox="0 0 16 16">

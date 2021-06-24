@@ -8,7 +8,7 @@
             <div class="row">
                 <div class="col-md-4">
                     <div class="form-group">
-                        <label for="">User</label>
+                        <label for="">Usuario</label>
                         <select name="user_id" id="user_id" class="form-control">
                             @foreach($users as $user)
                             <option value="{{ $user->id }}">{{ $user->names }}</option>
@@ -38,7 +38,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="form-group">
-                        <label for="phone">Pdf</label>
+                        <label for="pdf">Pdf</label>
                         <input type="file" class="form-control" name="pdf" id="pdf">
                     </div>
                 </div>

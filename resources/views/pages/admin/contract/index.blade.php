@@ -2,7 +2,7 @@
 @section('content')
 
     <h1>Contratos</h1>
-    <p>Aquí podrás encontrar todos contratos que hay en el sistema</p>
+    <p>Aquí podrás encontrar todos los contratos que hay en el sistema</p>
     <a class="btn btn-primary btn-sm" href="{{ route('contracts.create') }}">Crear Nuevo</a>
     <div class="card-body">
         <div class="table-sm table-responsive">

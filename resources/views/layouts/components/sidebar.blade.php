@@ -48,7 +48,7 @@
             </a>
             {{-- Foto de perfil del sidebar parte inferior --}}
             <a href="" class="profile">
-                <img src="{{ url('img/profile-picture.png') }}" alt="profile-user" class="rounded-circle thumb-sm">
+                <img src="{{ auth()->user()->profile_picture }}" alt="profile-user" class="rounded-circle thumb-sm">
             </a>
         </div>
     </div>
@@ -76,18 +76,12 @@
                     @role('Administrador|Supervisor|Secretario')
                     <li class="nav-item"><a class="nav-link" href="{{ url('users') }}">Usuarios</a></li>
                     @endrole
-
-                    <li class="nav-item "><a class="nav-link" href="{{ url('training_center') }}">Centros de
-                            Formación</a></li>
+                    <li class="nav-item "><a class="nav-link" href="{{ url('training_center') }}">Centros de Formación</a></li>
                     <li class="nav-item "><a class="nav-link" href="{{ url('campus') }}">Instalación</a></li>
-                    {{--  <li class="nav-item"><a class="nav-link" href="{{ route('contact') }}">Contáctenos</a></li>  --}}
-                    {{--  <li class="nav-item "><a class="nav-link" href="{{ url('incapacidad') }}">Enviar Incapacidad</a>  --}}
                     </li>
-
                     @role('Administrador|Supervisor')
                     <li class="nav-item "><a class="nav-link" href="{{ url('genders') }}">Géneros</a></li>
-                    <li class="nav-item "><a class="nav-link" href="{{ url('document_types') }}">Tipos de
-                            Documento</a></li>
+                    <li class="nav-item "><a class="nav-link" href="{{ url('document_types') }}">Tipos de Documento</a></li>
                     @endrole
                 </ul>
             </div><!-- end Revisión -->

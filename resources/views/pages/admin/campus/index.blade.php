@@ -15,6 +15,7 @@
                     <th>Instalación</th>
                     <th>Dirección</th>
                     <th>Teléfono</th>
+                    <th>Centro de Formación</th>
                     @role('Administrador')
                     <th>Acciones</th>
                     @endrole
@@ -27,6 +28,7 @@
                         <td>{{ $campus->name }}</td>
                         <td>{{ $campus->address }}</td>
                         <td>{{ $campus->phone }}</td>
+                        <td>{{ $campus->training_center }}</td>
                         @role('Administrador')
                         <td name="buttons">
                             <div class=" pull-right">

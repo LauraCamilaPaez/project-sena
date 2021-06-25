@@ -39,7 +39,7 @@ class UserController extends Controller
         ->with([
             'status' => 'Se ha Creado el Usuario correctamente.',
             'type' => 'warning',]);
-        
+
     }
 
     /**

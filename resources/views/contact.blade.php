@@ -27,19 +27,19 @@
                         <div class="col-md-6">
 
                             <div class="form-group wow fadeInDown" data-wow-duration="500ms" data-wow-delay=".6s">
-                                <input type="text" placeholder="Your Name" class="form-control" name="name" id="name"
+                                <input type="text" placeholder="Nombres y Apellidos" class="form-control" name="name" id="name"
                                     required="required" data-validation-required-message="Please enter your name." />
                             </div>
 
                             <div class="form-group wow fadeInDown" data-wow-duration="500ms" data-wow-delay=".8s">
-                                <input type="email" placeholder="Your Email" class="form-control" name="email" id="email"
+                                <input type="email" placeholder="Correo Electrónico" class="form-control" name="email" id="email"
                                     required="required"
                                     data-validation-required-message="Please enter your email address." />
                                 <p class="help-block text-danger"></p>
                             </div>
 
                             <div class="form-group mb-md-0" data-wow-duration="500ms" data-wow-delay="1s">
-                                <input type="text" placeholder="Subject" class="form-control" name="subject" id="subject"
+                                <input type="text" placeholder="Asunto" class="form-control" name="subject" id="subject"
                                     required="required"
                                     data-validation-required-message="Please enter your phone number." />
                                 <p class="help-block text-danger"></p>
@@ -47,17 +47,17 @@
                             </div>
 
                             <div class="form-group mb-md-0">
-                                <input class="form-control" name="phone" id="phone" type="tel" placeholder="Teléfono *"
+                                <input class="form-control" name="phone" id="phone" type="tel" placeholder="Teléfono"
                                     required="required"
                                     data-validation-required-message="Please enter your phone number." />
                                 <p class="help-block text-danger"></p>
-                            </div> 
+                            </div>
                         </div>
 
                         <div class="col-md-6">
                             <div class="form-group form-group-textarea mb-md-0 wow fadeInDown" data-wow-duration="500ms"
                                 data-wow-delay="1.2s">
-                                <textarea rows="6" placeholder="Message" class="form-control" name="body"
+                                <textarea rows="6" placeholder="Mensaje" class="form-control" name="body"
                                     id="messagescontact"></textarea>
                             </div>
                         </div>

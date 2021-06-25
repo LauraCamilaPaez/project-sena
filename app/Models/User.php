@@ -28,9 +28,11 @@ class User extends Authenticatable
     protected $fillable = [
         'names',
         'lastnames',
+        'profession',
+        'gender_id',
+        'document_type_id',
         'email',
         'password',
-        'gender',
         'document',
         'document_type',
         'phone',
@@ -67,4 +69,19 @@ class User extends Authenticatable
     protected $appends = [
         'profile_photo_url',
     ];
+
+    public function genders()
+    {
+        return $this->belongsTo('App\Models\Gender', 'gender_id');
+    }
+
+    public function document_types()
+    {
+        return $this->belongsTo('App\Models\DocumentTypes', 'document_type_id');
+    }
+
+    public function training_center()
+    {
+        return $this->belongsTo('App\Models\TrainingCenter', 'training_center_id');
+    }
 }

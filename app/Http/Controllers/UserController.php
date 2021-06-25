@@ -4,8 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Models\DocumentType;
 use App\Models\Gender;
+use App\Models\TrainingCenter;
 use Illuminate\Http\Request;
 use App\Models\User;
+use Spatie\Permission\Models\Role;
 
 class UserController extends Controller
 {
@@ -30,6 +32,7 @@ class UserController extends Controller
     public function create()
     {
         $document_types = DocumentType::all();
+        $roles = Role::all();
         $genders = Gender::all();
         return view('pages.admin.user.create', compact('genders', 'document_types'))
         ->with([
@@ -48,10 +51,10 @@ class UserController extends Controller
     {
             $request['password'] = bcrypt($request->document);
             $user = User::create($request->all());
+            $user->assignRole($request['role']);
             return redirect()->route('users.index')->
             with([
-                'status' => 'Se ha Creado el Usuario correctamente.',
-                'type' => 'warning',
+                'status' => 'Se ha creado el Usuario correctamente.',
             ]);
     }
 

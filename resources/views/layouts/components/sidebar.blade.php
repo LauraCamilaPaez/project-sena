@@ -67,14 +67,14 @@
         </div>
         <!--end logo-->
         <div class="menu-body slimscroll">
-            <div id="MetricaAnalytics" class="main-icon-menu-pane active">
+            <div id="MetricaAnalytics" class="main-icon-menu-pane">
                 <div class="title-box">
                     <h6 class="menu-title">Revisión</h6>
                 </div>
-                <ul class="nav ">
+                <ul class="nav">
 
                     @role('Administrador|Supervisor|Secretario')
-                    <li class="nav-item "><a class="nav-link" href="{{ url('users') }}">Usuarios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ url('users') }}">Usuarios</a></li>
                     @endrole
 
                     <li class="nav-item "><a class="nav-link" href="{{ url('training_center') }}">Centros de
@@ -90,7 +90,6 @@
                     <li class="nav-item "><a class="nav-link" href="{{ url('document_types') }}">Tipos de
                             Documento</a></li>
                     @endrole
-
                 </ul>
             </div><!-- end Revisión -->
 
@@ -100,12 +99,10 @@
                 </div>
                 <ul class="nav metismenu">
                     <li class="nav-item">
-                        <a class="nav-link" href="javascript: void(0);"><span class="w-100">Name-User</span><span
+                        <a class="nav-link" href="javascript: void(0);"><span class="w-100">{{ auth()->user()->names }}</span><span
                                 class="menu-arrow"><i class="mdi mdi-chevron-right"></i></span></a>
                         <ul class="nav-second-level" aria-expanded="false">
-                            <li><a href="/apps/email-inbox">Editar Foto</a></li>
-                            <li><a href="/apps/email-read">Editar datos personales</a></li>
-                            <li><a href="/apps/email-read">Editar contraseña</a></li>
+                            <li><a href="{{ url('edit-profile') }}">Perfil</a></li>
                         </ul>
                         {{-- <li class="nav-item "><a class="nav-link" href="{{ url('inability') }}">Incapacidades</a></li> --}}
                     </li>
@@ -142,16 +139,10 @@
                     <h6 class="menu-title">Certificados</h6>
                 </div>
                 <ul class="nav">
+                    <li class="nav-item "><a class="nav-link" href="{{ url('status_certificate') }}">Estado del Certificado</a></li>
+                    <li class="nav-item "><a class="nav-link" href="{{ url('list-contract') }}">Mis Contratos</a></li>
+                    <li class="nav-item "><a class="nav-link" href="{{ url('contracts') }}">Contratos</a></li>
 
-
-                    <li class="nav-item"><a class="nav-link" href="/pages/pages-tour">Ver</a></li>
-                    @role('Administrador')
-                    <li class="nav-item"><a class="nav-link" href="/pages/pages-profile">Crear</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/pages/pages-timeline">Editar</a></li>
-                    @role('Administrador|Secretario')
-                    <li class="nav-item"><a class="nav-link" href="/pages/pages-treeview">Eliminar</a></li>
-                    @endrole
-                    @endrole
 
                 </ul>
             </div><!-- end Pages -->

@@ -3,12 +3,12 @@
 
     <h1>Nuevo Contrato</h1>
     <div class="container mt-3">
-        <form action="{{ url('contracts') }}" method="post">
+        <form action="{{ url('contracts') }}" method="post" enctype="multipart/form-data">
             @csrf
             <div class="row">
                 <div class="col-md-4">
                     <div class="form-group">
-                        <label for="">User</label>
+                        <label for="">Usuario</label>
                         <select name="user_id" id="user_id" class="form-control">
                             @foreach($users as $user)
                             <option value="{{ $user->id }}">{{ $user->names }}</option>
@@ -38,8 +38,8 @@
                 </div>
                 <div class="col-md-4">
                     <div class="form-group">
-                        <label for="phone">Pdf</label>
-                        <input type="text" class="form-control" name="pdf" id="pdf">
+                        <label for="pdf">Pdf</label>
+                        <input type="file" class="form-control" name="pdf" id="pdf">
                     </div>
                 </div>
             </div>

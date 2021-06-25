@@ -3,7 +3,7 @@
     <!-- Navbar -->
     <nav class="navbar-custom">
         <ul class="list-unstyled topbar-nav float-right mb-0">
-            <li class="hidden-sm">
+            {{--<li class="hidden-sm">
                 <a class="nav-link dropdown-toggle waves-effect waves-light" data-toggle="dropdown"
                    href="javascript: void(0);" role="button"
                    aria-haspopup="false" aria-expanded="false">
@@ -16,7 +16,7 @@
                             class="ml-2 float-right" height="14"/>
                         </a>
                 </div>
-            </li>
+            </li> --}}
 
             {{--  <li class="dropdown notification-list">
                 <a class="nav-link dropdown-toggle arrow-none waves-light waves-effect" data-toggle="dropdown" href="#"
@@ -108,14 +108,14 @@
                 <a class="nav-link dropdown-toggle waves-effect waves-light nav-user" data-toggle="dropdown" href="#"
                    role="button"
                    aria-haspopup="false" aria-expanded="false">
-                    <img src="{{ url('img/profile-picture.png') }}" alt="profile-user"
+                    <img src="{{ auth()->user()->profile_picture }}" alt="profile-user"
                          class="rounded-circle"/>
                     <span class="ml-1 nav-user-name hidden-sm"> {{ @Auth::user()->names }} <i class="mdi mdi-chevron-down"></i> </span>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right">
-                    <a class="dropdown-item" href="#"><i class="dripicons-gear text-muted mr-2"></i> Perfil </a>
-                    <a class="dropdown-item" href="#"><i class="dripicons-gear text-muted mr-2"></i> Mis Certificados</a>
-                    <a class="dropdown-item" href="#"><i class="dripicons-gear text-muted mr-2"></i> Mis Incapacidades</a>
+                    <a class="dropdown-item" href="{{ url('edit-profile') }}"><i class="dripicons-gear text-muted mr-2"></i> Perfil </a>
+                    <a class="dropdown-item" href="{{ url('list-contract') }}"><i class="dripicons-gear text-muted mr-2"></i> Mis Certificados</a>
+                    <a class="dropdown-item" href="{{ url('inability') }}"><i class="dripicons-gear text-muted mr-2"></i> Mis Incapacidades</a>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" onclick="document.getElementById('logout').submit()"><i class="dripicons-exit text-muted mr-2"></i> Cerrar Sesión</a>
                 </div>
@@ -137,12 +137,6 @@
                 <button class="button-menu-mobile nav-link">
                     <i data-feather="menu" class="align-self-center"></i>
                 </button>
-            </li>
-            <li class="hide-phone app-search">
-                <form role="search" class="">
-                    <input type="text" id="AllCompo" placeholder="Buscar..." class="form-control">
-                    <a href=""><i class="fas fa-search"></i></a>
-                </form>
             </li>
         </ul>
     </nav>

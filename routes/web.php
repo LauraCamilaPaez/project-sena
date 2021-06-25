@@ -36,8 +36,8 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function(){
     Route::get('/', function () {
         return view('welcome');
     });
-    Route::get('users/edit-profile', [UserController::class, 'edit_profile']);
-    Route::put('users/update-profile', [UserController::class, 'update_profile']);
+    Route::get('edit-profile', [UserController::class, 'edit_profile']);
+    Route::put('update-profile', [UserController::class, 'update_profile']);
     Route::resource('users',UserController::class);
     Route::resource('genders', GenderController::class);
     Route::resource('document_types', DocumentTypeController::class);
@@ -87,7 +87,7 @@ Route::post('messages', function(){
   $data = request()->all();
   Mail::send("emails.message", $data, function($message) use ($data) {
       $message->from($data['email'], $data['name'])
-          ->to('dprueba029@gmail.com', 'Diego') 
+          ->to('dprueba029@gmail.com', 'Diego')
           ->subject($data['subject']);
   });
   //responder al usuario
@@ -97,11 +97,11 @@ Route::post('messages', function(){
 
 //mensaje para contáctanos
 Route::post('messagescontact', function(){
-  //enviar correo 
+  //enviar correo
   $data = request()->all();
   Mail::send("emails.messagecontact", $data, function($messagescontact) use ($data) {
       $messagescontact->from($data['email'], $data['name'])
-          ->to('dprueba029@gmail.com', 'Diego') 
+          ->to('dprueba029@gmail.com', 'Diego')
           ->subject($data['subject']);
   });
   //responder al usuario

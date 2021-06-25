@@ -12,6 +12,11 @@ class Campus extends Model
     protected $fillable = [
         'name',
         'address',
-        'phone'
+        'phone',
+        'training_center_id',
     ];
+
+    public function trainingCenter(){
+        return $this->belongsTo('App\Models\TrainingCenter', 'training_center_id');
+    }
 }

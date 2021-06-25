@@ -13,7 +13,8 @@
                 <div class="dropdown-menu dropdown-menu-right">
                     <a class="dropdown-item" href="javascript: void(0);"><span> Inglés </span><img
                             src="http://metrica.laravel.themesbrand.com/assets/images/flags/us_flag.jpg" alt=""
-                            class="ml-2 float-right" height="14"/></a>
+                            class="ml-2 float-right" height="14"/>
+                        </a>
                 </div>
             </li>
 

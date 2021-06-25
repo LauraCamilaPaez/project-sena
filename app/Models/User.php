@@ -35,6 +35,7 @@ class User extends Authenticatable
         'document_type',
         'phone',
         'mobile',
+        'status',
     ];
 
     /**

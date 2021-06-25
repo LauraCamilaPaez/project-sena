@@ -9,7 +9,7 @@ class Gender extends Model
 {
     use HasFactory;
 
-    protected $fillable= [
-        'gender'
-        ];
+    protected $fillable = [
+        'gender',
+    ];
 }

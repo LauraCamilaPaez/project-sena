@@ -9,7 +9,7 @@
                     </span>
         </a>
         <nav class="nav">
-            <a href="#MetricaAnalytics" class="nav-link active" data-toggle="tooltip-custom" data-placement="right" title=""
+            <a href="#MetricaAnalytics" class="nav-link" data-toggle="tooltip-custom" data-placement="right" title=""
                data-original-title="Revisión" data-trigger="hover" >
                 <i data-feather="eye" class="align-self-center menu-icon icon-dual"></i>
             </a><!--end MetricaAnalytics-->
@@ -41,7 +41,7 @@
                 <i data-feather="github" class="align-self-center menu-icon icon-md icon-dual mb-4"></i>
             </a>
             <a href="" class="profile">
-                <img src="{{ url('img/profile-picture.png') }}" alt="profile-user"
+                <img src="{{ auth()->user()->profile_picture }}" alt="profile-user"
                      class="rounded-circle thumb-sm">
             </a>
         </div>
@@ -61,19 +61,23 @@
         </div>
         <!--end logo-->
         <div class="menu-body slimscroll">
-            <div id="MetricaAnalytics" class="main-icon-menu-pane active">
+            <div id="MetricaAnalytics" class="main-icon-menu-pane">
                 <div class="title-box">
                     <h6 class="menu-title">Revisión</h6>
                 </div>
-                <ul class="nav ">
-                    <li class="nav-item "><a class="nav-link" href="{{ url('users') }}">Usuarios</a></li>
+                <ul class="nav">
+
+                    @role('Administrador|Supervisor|Secretario')
+                    <li class="nav-item"><a class="nav-link" href="{{ url('users') }}">Usuarios</a></li>
+                    @endrole
+
                     <li class="nav-item "><a class="nav-link" href="{{ url('training_center') }}">Centros de Formación</a></li>
                     <li class="nav-item "><a class="nav-link" href="{{ url('campus') }}">Instalación</a></li>
+
+                    @role('Administrador|Supervisor')
                     <li class="nav-item "><a class="nav-link" href="{{ url('genders') }}">Géneros</a></li>
                     <li class="nav-item "><a class="nav-link" href="{{ url('document_types') }}">Tipos de Documento</a></li>
-                    <li class="nav-item "><a class="nav-link" href="{{ url('profile') }}">Perfil</a></li>
-                    <li class="nav-item "><a class="nav-link" href="/analytics/analytics-customers">Incapacidades</a></li>
-                    <li class="nav-item "><a class="nav-link" href="/analytics/analytics-reports">Certificados</a></li>
+                    @endrole
                 </ul>
             </div><!-- end Revisión -->
 
@@ -83,13 +87,12 @@
                 </div>
                 <ul class="nav metismenu">
                     <li class="nav-item">
-                        <a class="nav-link" href="javascript: void(0);"><span class="w-100">Name-User</span><span
+                        <a class="nav-link" href="javascript: void(0);"><span class="w-100">{{ auth()->user()->names }}</span><span
                                 class="menu-arrow"><i class="mdi mdi-chevron-right"></i></span></a>
                         <ul class="nav-second-level" aria-expanded="false">
-                            <li><a href="/apps/email-inbox">Editar Foto</a></li>
-                            <li><a href="/apps/email-read">Editar datos personales</a></li>
-                            <li><a href="/apps/email-read">Editar contraseña</a></li>
+                            <li><a href="{{ url('edit-profile') }}">Perfil</a></li>
                         </ul>
+                        {{--  <li class="nav-item "><a class="nav-link" href="{{ url('inability') }}">Incapacidades</a></li>  --}}
                     </li><!--end nav-item-->
                 </ul>
             </div><!-- end Perfil -->
@@ -99,10 +102,11 @@
                     <h6 class="menu-title">Incapacidades</h6>
                 </div>
                 <ul class="nav">
-                    <li class="nav-item"><a class="nav-link" href="/pages/pages-profile">Crear</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/pages/pages-tour">Ver</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/pages/pages-timeline">Editar</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/pages/pages-treeview">Eliminar</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ url('inability') }}">Incapacidades</a></li>
+                    <li class="nav-item "><a class="nav-link" href="{{ url('incapacidad') }}">Enviar Incapacidad</a></li>
+
+
+
                 </ul>
             </div><!-- end Incapacidades -->
 
@@ -111,20 +115,28 @@
                     <h6 class="menu-title">Certificados</h6>
                 </div>
                 <ul class="nav">
-                    <li class="nav-item"><a class="nav-link" href="/pages/pages-profile">Crear</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/pages/pages-tour">Ver</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/pages/pages-timeline">Editar</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/pages/pages-treeview">Eliminar</a></li>
+                    <li class="nav-item "><a class="nav-link" href="{{ url('status_certificate') }}">Estado del Certificado</a></li>
+                    <li class="nav-item "><a class="nav-link" href="{{ url('list-contract') }}">Mis Contratos</a></li>
+                    <li class="nav-item "><a class="nav-link" href="{{ url('contracts') }}">Contratos</a></li>
+
+
                 </ul>
             </div><!-- end Pages -->
             <div id="MetricaAuthentication" class="main-icon-menu-pane">
                 <div class="title-box">
-                    <h6 class="menu-title">Authentication</h6>
+                    <h6 class="menu-title">Noticias y Contacto</h6>
                 </div>
+                <ul class="nav metismenu">
+                    <li class="nav-item">
+                        <a class="nav-link" href="javascript: void(0);"><span class="w-100">Revisión</span><span
+                                class="menu-arrow"><i class="mdi mdi-chevron-right"></i></span></a>
+                        <ul class="nav-second-level" aria-expanded="false">
+                            <li><a href="{{ url('news') }}">Noticias</a></li>
+                        </ul>
+                    </li><!--end nav-item-->
+                </ul>
                 <ul class="nav">
-                    <li class="nav-item"><a class="nav-link" href="/authentication/auth-login">SENALAB</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/authentication/auth-login-alt">SENA</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/authentication/auth-register">CEET</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ route('contact') }}">Contáctenos</a></li>
                 </ul>
             </div><!-- end News-->
         </div><!--end menu-body-->

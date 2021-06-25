@@ -20,7 +20,8 @@ class DocumentTypeController extends Controller
     public function store(Request $request)
     {
         $document_type = DocumentType::create($request->all());
-        return back();
+        return redirect()->route('document_types.index')
+            ->with('status','Se ha creado el Tipo de Documento correctamente.');
     }
 
     public function edit($id)
@@ -32,11 +33,17 @@ class DocumentTypeController extends Controller
     public function update(Request $request, $id)
     {
         $document_type = DocumentType::find($id)->update($request->all());
-        return back();
+        return back()->with([
+            'status' => 'Se ha editado el Tipo de Documento correctamente.',
+            'type' => 'warning',
+        ]);
     }
 
     public function destroy($id){
         $document_type = DocumentType::find($id)->delete();
-        return back();
+        return back()->with([
+            'status' => 'Se ha eliminado el Tipo de Documento correctamente.',
+            'type' => 'danger',
+        ]);
     }
 }

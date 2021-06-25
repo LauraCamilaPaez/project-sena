@@ -80,9 +80,8 @@
                     <li class="nav-item "><a class="nav-link" href="{{ url('training_center') }}">Centros de
                             Formación</a></li>
                     <li class="nav-item "><a class="nav-link" href="{{ url('campus') }}">Instalación</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{{ route('contact') }}">Contáctenos</a></li>
-                    <li class="nav-item "><a class="nav-link" href="{{ url('profile') }}">Perfil</a></li>
-                    <li class="nav-item "><a class="nav-link" href="{{ url('incapacidad') }}">Enviar Incapacidad</a>
+                    {{--  <li class="nav-item"><a class="nav-link" href="{{ route('contact') }}">Contáctenos</a></li>  --}}
+                    {{--  <li class="nav-item "><a class="nav-link" href="{{ url('incapacidad') }}">Enviar Incapacidad</a>  --}}
                     </li>
 
                     @role('Administrador|Supervisor')
@@ -125,7 +124,7 @@
                     @role('Supervisor|Secretario')
                     {{-- <li class="nav-item"><a class="nav-link" href="/pages/pages-treeview">Eliminar</a></li> --}}
                     {{-- <li class="nav-item "><a class="nav-link" href="{{ url('inability') }}">Incapacidades</a></li> --}}
-                    <li class="nav-item "><a class="nav-link" href="{{ url('incapacidad') }}">Enviar Incapacidad</a>
+                    {{--  <li class="nav-item "><a class="nav-link" href="{{ url('incapacidad') }}">Enviar Incapacidad</a>  --}}
                     </li>
                     @endrole
                     @endrole

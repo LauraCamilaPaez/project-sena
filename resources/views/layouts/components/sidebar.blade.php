@@ -7,7 +7,7 @@
             </span>
         </a>
         <nav class="nav">
-            <a href="#MetricaAnalytics" class="nav-link active" data-toggle="tooltip-custom" data-placement="right"
+            <a href="#MetricaAnalytics" class="nav-link" data-toggle="tooltip-custom" data-placement="right"
                 title="" data-original-title="Revisión" data-trigger="hover">
                 <i data-feather="eye" class="align-self-center menu-icon icon-dual"></i>
             </a>

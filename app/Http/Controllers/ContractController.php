@@ -17,13 +17,17 @@ class ContractController extends Controller
 
     public function create()
     {
-        $users =User::all();
-        return view('pages.admin.contract.create',compact('users'));
+        $users = User::all();
+        return view('pages.admin.contract.create', compact('users'));
     }
 
     public function store(Request $request)
     {
-        $contracts = Contract::create($request->all());
+        $data = $request->all();
+        $pdf = $request->file('pdf');
+        $url = $pdf->store('public/pdf');
+        $data['pdf'] = $url;
+        $contracts = Contract::create($data);
         return redirect()->route('contracts.index')
             ->with('status', 'Se ha creado el Contrato correctamente.');
     }
@@ -42,10 +46,12 @@ class ContractController extends Controller
             'type' => 'warning',
         ]);
     }
+
     //listar contratos asociados a un usuario
-    public function listContracts(){
+    public function listContracts()
+    {
         $user = Auth::user();
-        $contracts = Contract::where('user_id',$user->id)->get();
+        $contracts = Contract::where('user_id', $user->id)->get();
         return view('pages.users.contract.list_contract', compact('contracts'));
     }
 }

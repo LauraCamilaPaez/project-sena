@@ -18,6 +18,8 @@ class CreateCampusTable extends Migration
             $table->string('name',45);
             $table->string('address', 45);
             $table->string('phone', 15);
+            $table->unsignedBigInteger('training_center_id');
+            $table->foreign('training_center_id')->references('id')->on('training_center');
             $table->timestamps();
         });
     }

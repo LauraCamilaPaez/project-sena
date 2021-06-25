@@ -18,12 +18,14 @@ class CampusTableSeeder extends Seeder
             'name' => 'Sede Colombia',
             'address' => 'Cl. 69 #20-36',
             'phone' => '4541411',
+            'training_center_id' => 1,
         ]);
 
         $campus = Campus::create([
             'name' => 'Sede Ricaurte',
             'address' => 'Cl. 79 #20-36',
             'phone' => '4445451',
+            'training_center_id' => 1,
         ]);
     }
 }

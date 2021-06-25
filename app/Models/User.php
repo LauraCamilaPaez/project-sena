@@ -39,6 +39,7 @@ class User extends Authenticatable
         'mobile',
         'status',
         'profile_picture',
+        'training_center_id',
     ];
 
     /**
@@ -79,5 +80,10 @@ class User extends Authenticatable
     public function document_types()
     {
         return $this->belongsTo('App\Models\DocumentTypes', 'document_type_id');
+    }
+
+    public function training_center()
+    {
+        return $this->belongsTo('App\Models\TrainingCenter', 'training_center_id');
     }
 }

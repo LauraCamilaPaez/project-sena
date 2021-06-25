@@ -17,7 +17,7 @@
 
                         <div class="met-profile_user-detail">
                             <h5 class="met-user-name">{{ auth()->user()->names }} {{ auth()->user()->lastnames }}</h5>
-                            <p class="mb-0 met-user-name-post">Servicio Nacional de Aprendizaje SENA</p>
+                            <p class="mb-0 met-user-name-post">Servicio Nacional de Aprendizaje SENA @foreach(Auth::user()->roles as $role) {{ $role->name }} @endforeach</p>
                         </div>
                     </div>
                 </div><!--end col-->

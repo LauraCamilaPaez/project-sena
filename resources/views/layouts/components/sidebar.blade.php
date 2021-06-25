@@ -117,6 +117,7 @@
                 <ul class="nav">
                     <li class="nav-item "><a class="nav-link" href="{{ url('status_certificate') }}">Estado del Certificado</a></li>
                     <li class="nav-item "><a class="nav-link" href="{{ url('list-contract') }}">Mis Contratos</a></li>
+                    <li class="nav-item "><a class="nav-link" href="{{ url('contracts') }}">Contratos</a></li>
 
 
                 </ul>

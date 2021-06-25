@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\DocumentType;
 use App\Models\Gender;
+use App\Models\TrainingCenter;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Spatie\Permission\Models\Role;
@@ -33,7 +34,8 @@ class UserController extends Controller
         $document_types = DocumentType::all();
         $roles = Role::all();
         $genders = Gender::all();
-        return view('pages.admin.user.create', compact('genders', 'document_types', 'roles'));
+        $training_centers = TrainingCenter::all();
+        return view('pages.admin.user.create', compact('genders', 'document_types', 'roles', 'training_centers'));
 
     }
 
@@ -50,8 +52,7 @@ class UserController extends Controller
             $user->assignRole($request['role']);
             return redirect()->route('users.index')->
             with([
-                'status' => 'Se ha Creado el Usuario correctamente.',
-                'type' => 'warning',
+                'status' => 'Se ha creado el Usuario correctamente.',
             ]);
     }
 
@@ -78,7 +79,8 @@ class UserController extends Controller
         $document_types = DocumentType::all();
         $genders = Gender::all();
         $roles = Role::all();
-        return view('pages.admin.user.edit', compact('user', 'genders', 'document_types', 'roles'));
+        $training_centers = TrainingCenter::all();
+        return view('pages.admin.user.edit', compact('user', 'genders', 'document_types', 'roles', 'training_centers'));
     }
 
     /**

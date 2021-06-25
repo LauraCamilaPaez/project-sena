@@ -105,6 +105,17 @@
                         </select>
                     </div>
                 </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="training_center_id">Centro de Formación</label>
+                        <select name="training_center_id" id="training_center_id" class="form-control" required>
+                            <option value="" selected>Seleccionar...</option>
+                            @foreach($training_centers as $training_center)
+                                <option value="{{ $training_center->id }}">{{ $training_center->name }}</option>
+                            @endforeach
+                        </select>
+                    </div>
+                </div>
             </div>
             <hr>
             <button class="btn btn-primary">Crear Usuario</button>

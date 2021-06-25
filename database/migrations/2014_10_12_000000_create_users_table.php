@@ -27,8 +27,10 @@ class CreateUsersTable extends Migration
             $table->string('profile_picture');
             $table->unsignedBigInteger('gender_id');
             $table->unsignedBigInteger('document_type_id');
+            $table->unsignedBigInteger('training_center_id');
             $table->foreign('document_type_id')->references('id')->on('document_types');
             $table->foreign('gender_id')->references('id')->on('genders');
+            $table->foreign('training_center_id')->references('id')->on('training_center');
             $table->rememberToken();
             $table->timestamp('email_verified_at')->nullable();
             $table->foreignId('current_team_id')->nullable();

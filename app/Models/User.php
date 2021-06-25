@@ -38,8 +38,6 @@ class User extends Authenticatable
         'phone',
         'mobile',
         'status',
-        'profile_picture',
-        'training_center_id',
     ];
 
     /**

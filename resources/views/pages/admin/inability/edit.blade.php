@@ -70,7 +70,7 @@
             </div>
             <hr>
             <button class="btn btn-primary">Actualizar Incapacidad</button>
-            <a href="{{ url('inability') }}" class="btn btn-danger">Cancelar</a>
+            <a href="{{ url('inability') }}" class="btn btn-danger">Volver</a>
         </form>
     </div>
 @endsection

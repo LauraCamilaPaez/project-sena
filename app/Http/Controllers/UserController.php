@@ -34,9 +34,11 @@ class UserController extends Controller
         $document_types = DocumentType::all();
         $roles = Role::all();
         $genders = Gender::all();
-        $training_centers = TrainingCenter::all();
-        return view('pages.admin.user.create', compact('genders', 'document_types', 'roles', 'training_centers'));
-
+        return view('pages.admin.user.create', compact('genders', 'document_types'))
+        ->with([
+            'status' => 'Se ha Creado el Usuario correctamente.',
+            'type' => 'warning',]);
+        
     }
 
     /**
@@ -78,9 +80,10 @@ class UserController extends Controller
         $user = User::find($id);
         $document_types = DocumentType::all();
         $genders = Gender::all();
-        $roles = Role::all();
-        $training_centers = TrainingCenter::all();
-        return view('pages.admin.user.edit', compact('user', 'genders', 'document_types', 'roles', 'training_centers'));
+        return view('pages.admin.user.edit', compact('user', 'genders', 'document_types'))
+        ->with([
+            'status' => 'Se ha editado el Usuario correctamente.',
+            'type' => 'warning',]);
     }
 
     /**
@@ -94,7 +97,7 @@ class UserController extends Controller
     {
         $user = User::find($id)->update($request->all());
         return back()->with([
-            'status' => 'Se ha editado el Usuario correctamente.',
+            'status' => 'Se ha Actualizado el Usuario correctamente.',
             'type' => 'warning',
         ]);
     }
@@ -118,12 +121,19 @@ class UserController extends Controller
     {
         $document_types = DocumentType::all();
         $genders = Gender::all();
-        return view('profile', compact( 'genders', 'document_types'));
+        return view('profile', compact( 'genders', 'document_types'))->
+        with([
+            'status' => 'Se ha editado el Perfil correctamente.',
+            'type' => 'warning',
+        ]);;
     }
 
     public function update_profile(Request $request)
     {
         $update_profile = User::find(auth()->user()->id)->update($request->all());
-        return back();
+        return back()
+        ->with([
+            'status' => 'Se ha editado el Perfil correctamente.',
+            'type' => 'warning',]);
     }
 }

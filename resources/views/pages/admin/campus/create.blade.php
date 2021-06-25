@@ -20,6 +20,16 @@
                     <label for="">Teléfono</label>
                     <input type="text" class="form-control" name="phone" id="phone" required>
                 </div>
+                <div class="form-group">
+                    <label for="training_center_id">Centro de Formación</label>
+                    <select name="training_center_id" id="training_center_id" class="form-control">
+                        <option value="" selected>Seleccionar</option>
+                        @foreach($training_centers as $training_center)
+                        <option value="{{ $training_center->id }}">{{ $training_center->name }}</option>
+                        @endforeach
+                    </select>
+                </div>
+
             </div>
         </div>
         <button class="btn btn-primary">Crear Instalación</button>

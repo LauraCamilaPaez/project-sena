@@ -34,11 +34,12 @@ class UserController extends Controller
         $document_types = DocumentType::all();
         $roles = Role::all();
         $genders = Gender::all();
-        return view('pages.admin.user.create', compact('genders', 'document_types'))
+        $training_centers = TrainingCenter::all();
+        return view('pages.admin.user.create', compact('genders', 'document_types', 'roles', 'training_centers'))
         ->with([
             'status' => 'Se ha Creado el Usuario correctamente.',
             'type' => 'warning',]);
-        
+
     }
 
     /**

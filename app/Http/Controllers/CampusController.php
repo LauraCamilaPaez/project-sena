@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Campus;
+use App\Models\TrainingCenter;
 use Illuminate\Http\Request;
 
 class CampusController extends Controller
@@ -15,7 +16,8 @@ class CampusController extends Controller
 
     public function create()
     {
-        return view('pages.admin.campus.create');
+        $training_centers = TrainingCenter::all();
+        return view('pages.admin.campus.create', compact('training_centers'));
     }
 
     public function store(Request $request)

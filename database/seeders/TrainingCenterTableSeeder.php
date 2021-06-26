@@ -19,11 +19,5 @@ class TrainingCenterTableSeeder extends Seeder
             'address' => 'Av. 1 de Mayo #33-98',
             'nit' => '899.999034-1',
         ]);
-
-        $training_center = TrainingCenter::create([
-            'name' => 'Centro de Gestión de Mercados, Logística y Tecnologías de la Información',
-            'address' => 'C. 19A #96c-40',
-            'nit' => '899.999034-1',
-        ]);
     }
 }

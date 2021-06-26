@@ -42,19 +42,14 @@ class InabilityController extends Controller
      */
     public function store(Request $request)
     {
-        // $inability = Inability::create($request->all());
-        // return redirect()->route('inability.create')
-        // ->with('status','Se ha creado correctaente la inability');
-
-        $request['password'] = bcrypt($request->document);
-        $inability = Inability::create($request->all());
+        $data = $request->all();
+        $pdf = $request->file('pdf');
+        $url = $pdf->store('public/pdf');
+        $data['pdf'] = $url;
+        $inability = Inability::create($data);
         return redirect()->route('inability.index')->
         with([
-            'status' => 'Se ha Creado la Incapacidad correctamente.',
-            'type' => 'warning',
-        ]);
-
-       
+            'status' => 'Se ha creado la Incapacidad correctamente.']);
     }
 
     /**
@@ -65,7 +60,7 @@ class InabilityController extends Controller
      */
     public function show($id)
     {
-        
+
     }
 
     /**
@@ -107,12 +102,4 @@ class InabilityController extends Controller
      * @param  \App\Models\Inability  $inability
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
-    {
-        $inability = Inability::find($id)->delete();
-        return back()->with([
-            'status'=>'Se ha eliminado la inpacacidad correctamente',
-            'type'=>'danger',
-            ]);
-    }
 }

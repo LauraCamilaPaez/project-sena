@@ -11,6 +11,8 @@ class Inability extends Model
     use HasFactory;
 
     protected $fillable = [
+        'date_start',
+        'date_end',
         'names',
         'lastnames',
         'email',
@@ -19,5 +21,6 @@ class Inability extends Model
         'document_type',
         'phone',
         'mobile',
+        'pdf',
     ];
 }

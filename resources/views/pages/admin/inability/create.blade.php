@@ -3,8 +3,26 @@
 
     <h1>Nueva Incapacidad</h1>
     <div class="container mt-3">
-        <form action="{{ url('inability') }}" method="post">
+        <form action="{{ url('inability') }}" method="post" enctype="multipart/form-data">
             @csrf
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label for="pdf">Pdf</label>
+                    <input type="file" class="form-control" name="pdf" id="pdf">
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label for="">Fecha Inicio</label>
+                    <input type="date" class="form-control" name="date_start" id="date_start">
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label for="">Fecha Fin</label>
+                    <input type="date" class="form-control" name="date_end" id="date_end">
+                </div>
+            </div>
             <div class="row">
                 <div class="col-md-4">
                     <div class="form-group">
@@ -64,13 +82,6 @@
                     <div class="form-group">
                         <label for="mobile">Teléfono Móvil</label>
                         <input type="number" class="form-control" name="mobile" id="mobile1">
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="form-group">
-                        <label for="mobile">Teléfono Móvil</label>
-                        <input type="file" name="pdf" id="input-file-now-custom-1" class="dropify btn btn-info"
-                        data-default-file="../assets/images/users/user-4.jpg">
                     </div>
                 </div>
             </div>

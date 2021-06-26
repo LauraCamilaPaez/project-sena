@@ -25,7 +25,7 @@ class UserTableSeeder extends Seeder
             'phone' => 5678900,
             'mobile' => 3157428264,
             'status' => 1,
-            'profile_picture' => 'https://mannatthemes.com/metrica/metrica_simple/assets/images/users/user-4.jpg',
+            'profile_picture' => 'https://mannatthemes.com/metrica/metrica_simple/assets/images/users/user-1.jpg',
             'training_center_id' => 1,
         ]);
         $user->assignRole('Administrador');

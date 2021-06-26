@@ -6,6 +6,24 @@
         <form action="{{ route('inability.update',$inability->id) }}" method="post">
             @csrf
             @method('PUT')
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label for="phone">Pdf</label>
+                    <input type="text" class="form-control" name="pdf_inability" id="pdf_inability" value="{{ $inability->pdf}}">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label for="">Fecha Inicio</label>
+                    <input type="date" class="form-control" name="date_start" id="date_start" value="{{ $inability->date_start }}">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label for="">Fecha Fin</label>
+                    <input type="date" class="form-control" name="date_end" id="date_end" value="{{ $inability->date_end }}">
+                </div>
+            </div>
             <div class="row">
                 <div class="col-md-4">
                     <div class="form-group">

@@ -69,24 +69,6 @@
                                 </div>
                                 <!--end form-group-->
 
-                                <div class="form-group row mt-4">
-                                    <div class="col-sm-6">
-                                        <div class="custom-control custom-switch switch-success">
-                                            <input class="custom-control-input" type="checkbox" name="remember"
-                                                   id="customSwitchSuccess">
-
-                                            <label class="custom-control-label text-muted" for="customSwitchSuccess">Recuérdame
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <!--end col-->
-                                    <div class="col-sm-6 text-right">
-                                        <a href="http://metrica.laravel.themesbrand.com/password/reset"
-                                           class="text-muted font-13"><i class="dripicons-lock"></i> ¿Olvidó la contraseña?</a>
-                                    </div>
-                                    <!--end col-->
-                                </div>
-                                <!--end form-group-->
 
                                 <div class="form-group mb-0 row">
                                     <div class="col-12 mt-2">
@@ -110,28 +92,6 @@
                     </div>
                     <!--end card-body-->
                 </div>
-                <!--end card-->
-                <div class="account-social text-center mt-4">
-                    <h6 class="my-4">Inicia sesión con</h6>
-                    <ul class="list-inline mb-4">
-                        <li class="list-inline-item">
-                            <a href="" class="">
-                                <i class="fab fa-facebook-f facebook"></i>
-                            </a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a href="" class="">
-                                <i class="fab fa-twitter twitter"></i>
-                            </a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a href="" class="">
-                                <i class="fab fa-google google"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <!--end account-social-->
             </div>
             <!--end auth-page-->
         </div>

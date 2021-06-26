@@ -152,19 +152,6 @@ use App\Models\DocumentType;
                                     </div><!--end form-group-->
                                 </div><!--end form-group-->
 
-                                <div class="form-group row mt-4">
-                                    <div class="col-sm-12">
-                                        <div class="custom-control custom-switch switch-success">
-                                            <input type="checkbox" class="custom-control-input"
-                                                   id="customSwitchSuccess">
-                                            <label class="custom-control-label text-muted" for="customSwitchSuccess">Para
-                                                registrarte acepta
-                                                los términos y condiciones de Senalab<a href="#" class="text-primary">
-                                                    Términos</a></label>
-                                        </div>
-                                    </div><!--end col-->
-                                </div><!--end form-group-->
-
                                 <div class="form-group mb-0 row">
                                     <div class="col-12 mt-2">
                                         <button

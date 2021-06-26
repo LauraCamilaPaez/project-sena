@@ -1,4 +1,4 @@
-@extends('layouts.app')
+ @extends('layouts.app')
 
 @section('content')
 
@@ -74,8 +74,6 @@
                                     id="message"></textarea>
                             </div>
                         </div>
-                        <input type="file" name="pdf" id="input-file-now-custom-1" class="dropify btn btn-info"
-                        data-default-file="../assets/images/users/user-4.jpg">
 
                     </div>
             </div>

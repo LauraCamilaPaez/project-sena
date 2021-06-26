@@ -15,6 +15,8 @@ class CreateInabilitiesTable extends Migration
     {
         Schema::create('inabilities', function (Blueprint $table) {
             $table->id();
+            $table->date('date_start');
+            $table->date('date_end');
             $table->string('names', 45);
             $table->string('lastnames', 45);
             $table->string('email', 45);
@@ -23,6 +25,7 @@ class CreateInabilitiesTable extends Migration
             $table->string('document', 25);
             $table->string('phone', 15);
             $table->string('mobile', 25);
+            $table->string('pdf');
             // $table->string('pdf');
             // $table->unsignedBigInteger('role_id');
             $table->timestamps();

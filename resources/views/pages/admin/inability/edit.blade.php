@@ -3,7 +3,7 @@
 
     <h1>Actualizar Incapacidad</h1>
     <div class="container mt-3">
-        <form action="{{ route('inability.update',$inability->id) }}" method="post">
+        <form action="{{ route('inability.update',$inability->id) }}" method="post" enctype="multipart/form-data">
             @csrf
             @method('PUT')
             <div class="row">
@@ -65,6 +65,24 @@
                     <div class="form-group">
                         <label for="mobile">Teléfono Móvil</label>
                         <input type="text" class="form-control" value="{{ $inability->mobile }}" name="mobile" id="mobile">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="phone">Pdf</label>
+                        <input type="text" class="form-control" name="pdf_inability" id="pdf_inability" value="{{ $inability->pdf}}">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="">Fecha Inicio</label>
+                        <input type="date" class="form-control" name="date_start" id="date_start" value="{{ $inability->date_start }}">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="">Fecha Fin</label>
+                        <input type="date" class="form-control" name="date_end" id="date_end" value="{{ $inability->date_end }}">
                     </div>
                 </div>
             </div>

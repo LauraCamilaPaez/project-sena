@@ -42,12 +42,12 @@ class InabilityController extends Controller
      */
     public function store(Request $request)
     {
-        // $inability = Inability::create($request->all());
-        // return redirect()->route('inability.create')
-        // ->with('status','Se ha creado correctaente la inability');
-
-        $request['password'] = bcrypt($request->document);
-        $inability = Inability::create($request->all());
+        $data = $request->all();
+        $pdf = $request->file('pdf');
+        $url = $pdf->store('public/pdf');
+        $data['pdf'] = $url;  
+        $inability = Inability::create($data);      
+        //$inability = Inability::create($request->all());
         return redirect()->route('inability.index')->
         with([
             'status' => 'Se ha Creado la Incapacidad correctamente.',
@@ -76,8 +76,7 @@ class InabilityController extends Controller
      */
     public function edit($id)
     {
-        // $inability = Inability::find($id);
-        // return view('pages.admin.inability.edit', compact('inability'));
+        
 
         $inability = Inability::find($id);
         $document_types = DocumentType::all();
@@ -101,18 +100,18 @@ class InabilityController extends Controller
         ]);
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Inability  $inability
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        $inability = Inability::find($id)->delete();
-        return back()->with([
-            'status'=>'Se ha eliminado la inpacacidad correctamente',
-            'type'=>'danger',
-            ]);
-    }
+    // /**
+    //  * Remove the specified resource from storage.
+    //  *
+    //  * @param  \App\Models\Inability  $inability
+    //  * @return \Illuminate\Http\Response
+    //  */
+    // public function destroy($id)
+    // {
+    //     $inability = Inability::find($id)->delete();
+    //     return back()->with([
+    //         'status'=>'Se ha eliminado la inpacacidad correctamente',
+    //         'type'=>'danger',
+    //         ]);
+    // }
 }
